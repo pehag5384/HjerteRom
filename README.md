@@ -11,9 +11,9 @@ En webbasert applikasjon som hjelper deg å finne det beste omsorgssenteret for 
 | Markup | HTML5 |
 | Styling | CSS3, Bootstrap 5 |
 | Logikk | Vanilla JavaScript (ES6+) |
-| Ikoner | Bootstrap Icons |
+| Ikoner | Bootstrap Icons eller figma export |
 | Kart | Google Maps JavaScript API |
-| Data | JSON (lokale filer + API-fallbacks) |
+| Data | JSON (lokale filer + API-fallbacks), data fra API|
 
 ---
 
