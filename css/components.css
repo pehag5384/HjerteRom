@@ -74,3 +74,38 @@
 .care-card h6 {
     color: #2f4f2f;
 }
+
+.activity-card {
+    border-radius: 16px;
+    overflow: hidden;
+    background-color: #ffffff;
+}
+
+.activity-image {
+    width: 100%;
+    height: 180px;
+    object-fit: cover;
+}
+
+.activity-card h6 {
+    color: #2f4f2f;
+}
+
+.care-list-card {
+    border-radius: 16px;
+    background-color: #ffffff;
+}
+
+.info-box {
+    background-color: #f4f1e6;
+    border-radius: 12px;
+    padding: 8px 12px;
+}
+
+.tag {
+    background-color: #e6dec7;
+    border-radius: 12px;
+    padding: 4px 8px;
+    margin-right: 6px;
+    font-size: 12px;
+}

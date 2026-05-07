@@ -73,3 +73,59 @@ export function CareCenterCard({ name = "", image = "" }) {
         </div>
     `;
 }
+
+
+export function ActivityCard({ title = "", description = "", image = "" }) {
+    return `
+        <div class="card border-0 shadow-sm activity-card h-100">
+
+            <img src="${image}" class="activity-image" alt="${title}" />
+
+            <div class="card-body">
+                <h6 class="fw-semibold">${title}</h6>
+                <p class="text-muted small mb-0">${description}</p>
+            </div>
+
+        </div>
+    `;
+}
+
+
+
+export function CareListCard({
+    name = "",
+    location = "",
+    rating = "",
+    beds = "",
+    waitTime = "",
+    tags = []
+}) {
+    return `
+        <div class="card border-0 shadow-sm care-list-card p-3 mb-3">
+
+            <div class="d-flex justify-content-between align-items-start mb-2">
+            <div>
+                <h6 class="fw-semibold mb-0">${name}</h6>
+                <small class="text-muted">${location}</small>
+            </div>
+            <span class="badge bg-light text-dark">⭐ ${rating}</span>
+            </div>
+
+            <div class="d-flex gap-2 mb-2">
+                <div class="info-box">
+                <small>Senger</small>
+                <div class="fw-semibold">${beds}</div>
+            </div>
+
+            <div class="info-box flex-grow-1">
+                <small>Ventetid</small>
+                <div class="fw-semibold">${waitTime}</div>
+            </div>
+            </div>
+
+            <div class="mb-2">
+                ${tags.map(tag => `<span class="tag">${tag}</span>`).join("")}
+            </div>
+        </div>
+    `;
+}
