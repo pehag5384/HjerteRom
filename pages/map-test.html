@@ -1,0 +1,311 @@
+<!DOCTYPE html>
+<html lang="no">
+<head>
+	<meta charset="UTF-8" />
+	<meta name="viewport" content="width=device-width, initial-scale=1.0" />
+	<title>Map test – HjerteRom</title>
+	<style>
+		:root {
+			color-scheme: light;
+			--bg: #f5f1ea;
+			--panel: #fffaf2;
+			--text: #1f2a24;
+			--muted: #66736d;
+			--accent: #2f6f5f;
+			--accent-strong: #214d42;
+			--border: rgba(33, 77, 66, 0.14);
+			--shadow: 0 20px 50px rgba(25, 38, 34, 0.12);
+		}
+
+		* {
+			box-sizing: border-box;
+		}
+
+		body {
+			margin: 0;
+			font-family: Georgia, 'Times New Roman', serif;
+			color: var(--text);
+			background:
+				radial-gradient(circle at top left, rgba(47, 111, 95, 0.14), transparent 30%),
+				radial-gradient(circle at top right, rgba(220, 174, 90, 0.16), transparent 28%),
+				var(--bg);
+			min-height: 100vh;
+		}
+
+		main {
+			max-width: 1280px;
+			margin: 0 auto;
+			padding: 32px 20px 40px;
+		}
+
+		.hero {
+			display: grid;
+			gap: 12px;
+			margin-bottom: 20px;
+		}
+
+		.eyebrow {
+			margin: 0;
+			text-transform: uppercase;
+			letter-spacing: 0.16em;
+			font-size: 0.78rem;
+			color: var(--accent-strong);
+			font-weight: 700;
+		}
+
+		h1 {
+			margin: 0;
+			font-size: clamp(2rem, 3vw, 3.4rem);
+			line-height: 1.05;
+		}
+
+		.lede {
+			margin: 0;
+			max-width: 65ch;
+			font-size: 1.02rem;
+			color: var(--muted);
+			line-height: 1.6;
+		}
+
+		.layout {
+			display: grid;
+			grid-template-columns: minmax(0, 1.9fr) minmax(320px, 0.95fr);
+			gap: 18px;
+			align-items: start;
+		}
+
+		.map-card,
+		.side-card {
+			background: rgba(255, 250, 242, 0.92);
+			border: 1px solid var(--border);
+			border-radius: 28px;
+			box-shadow: var(--shadow);
+			backdrop-filter: blur(8px);
+			overflow: hidden;
+		}
+
+		.map-card {
+			min-height: 74vh;
+		}
+
+		#map {
+			width: 100%;
+			height: 74vh;
+			min-height: 620px;
+		}
+
+		.side-card {
+			padding: 18px;
+			display: grid;
+			gap: 16px;
+		}
+
+		.stat-grid {
+			display: grid;
+			grid-template-columns: repeat(2, minmax(0, 1fr));
+			gap: 12px;
+		}
+
+		.stat {
+			padding: 14px;
+			border-radius: 18px;
+			background: rgba(47, 111, 95, 0.08);
+			border: 1px solid rgba(47, 111, 95, 0.12);
+		}
+
+		.stat strong {
+			display: block;
+			font-size: 1.35rem;
+			margin-bottom: 4px;
+		}
+
+		.stat span,
+		.status {
+			color: var(--muted);
+			font-size: 0.92rem;
+			line-height: 1.5;
+		}
+
+		.city-list {
+			list-style: none;
+			padding: 0;
+			margin: 0;
+			display: grid;
+			gap: 10px;
+			max-height: 46vh;
+			overflow: auto;
+		}
+
+		.city-list button {
+			width: 100%;
+			display: grid;
+			gap: 4px;
+			text-align: left;
+			border: 1px solid var(--border);
+			background: white;
+			border-radius: 18px;
+			padding: 14px 16px;
+			cursor: pointer;
+			color: var(--text);
+			font: inherit;
+			transition: transform 0.2s ease, border-color 0.2s ease, box-shadow 0.2s ease;
+		}
+
+		.city-list button:hover,
+		.city-list button:focus-visible {
+			transform: translateY(-2px);
+			border-color: rgba(47, 111, 95, 0.35);
+			box-shadow: 0 12px 26px rgba(25, 38, 34, 0.1);
+			outline: none;
+		}
+
+		.city-title {
+			display: flex;
+			justify-content: space-between;
+			gap: 10px;
+			align-items: baseline;
+			font-weight: 700;
+		}
+
+		.city-meta {
+			color: var(--muted);
+			font-size: 0.9rem;
+		}
+
+		.status {
+			padding-top: 6px;
+			border-top: 1px solid var(--border);
+		}
+
+		@media (max-width: 960px) {
+			.layout {
+				grid-template-columns: 1fr;
+			}
+
+			#map,
+			.map-card {
+				min-height: 420px;
+				height: 56vh;
+			}
+		}
+	</style>
+</head>
+<body>
+	<main>
+		<section class="hero">
+			<p class="eyebrow">Karttest</p>
+			<h1>Viser kommunene fra cities.json på kartet</h1>
+			<p class="lede">
+				Denne siden er laget som en ren testvisning for koordinatene i <strong>cities.json</strong>.
+				Markørene kommer direkte fra dataene, og listen til høyre viser samme kommuner med koordinater.
+			</p>
+		</section>
+
+		<section class="layout">
+			<div class="map-card">
+				<div id="map" aria-label="Kart med kommunemarkører"></div>
+			</div>
+
+			<aside class="side-card">
+				<div class="stat-grid">
+					<div class="stat">
+						<strong id="municipality-count">–</strong>
+						<span>kommuner lastet inn</span>
+					</div>
+					<div class="stat">
+						<strong id="marker-count">–</strong>
+						<span>markører på kartet</span>
+					</div>
+				</div>
+
+				<ul id="city-list" class="city-list" aria-label="Kommuner"></ul>
+				<p id="status" class="status">Laster kart og kommunedata ...</p>
+			</aside>
+		</section>
+	</main>
+
+	<script type="module">
+		import { dataService } from '../js/dataService.js';
+		import { initCitiesMap } from '../js/mapService.js';
+
+		const mapElement = document.getElementById('map');
+		const cityListElement = document.getElementById('city-list');
+		const municipalityCountElement = document.getElementById('municipality-count');
+		const markerCountElement = document.getElementById('marker-count');
+		const statusElement = document.getElementById('status');
+
+		function extractApiKey(rawText) {
+			const match = rawText.match(/AIza[0-9A-Za-z_-]+/);
+			return match?.[0] ?? '';
+		}
+
+		function renderCityList(points, map) {
+			cityListElement.innerHTML = '';
+
+			points.forEach(({ city, marker }, index) => {
+				const item = document.createElement('li');
+				const button = document.createElement('button');
+
+				button.type = 'button';
+				button.innerHTML = `
+					<div class="city-title">
+						<span>${index + 1}. ${city.name}</span>
+						<span>${city.county}</span>
+					</div>
+					<div class="city-meta">
+						${city.coordinates.lat.toFixed(4)}, ${city.coordinates.lng.toFixed(4)}
+					</div>
+				`;
+
+				button.addEventListener('click', () => {
+					map.panTo(city.coordinates);
+					if (map.getZoom() < 8) {
+						map.setZoom(8);
+					}
+
+					window.google?.maps?.event?.trigger(marker, 'click');
+				});
+
+				item.appendChild(button);
+				cityListElement.appendChild(item);
+			});
+		}
+
+		async function start() {
+			try {
+				const [municipalities, apiKeyText] = await Promise.all([
+					dataService.getMunicipalities(),
+					fetch('../assets/APIkey.txt').then(response => response.text())
+				]);
+
+				const apiKey = extractApiKey(apiKeyText);
+
+				if (!apiKey) {
+					throw new Error('Fant ingen gyldig Google Maps-nøkkel i APIkey.txt.');
+				}
+
+				municipalityCountElement.textContent = String(municipalities.length);
+
+				const { map, points } = await initCitiesMap(mapElement, municipalities, {
+					apiKey,
+					zoom: 5,
+					center: { lat: 62.0, lng: 10.0 }
+				});
+
+				markerCountElement.textContent = String(points.length);
+				renderCityList(points, map);
+				statusElement.textContent = 'Kartet er klart. Klikk på en kommune i listen for å zoome inn på markøren.';
+			} catch (error) {
+				console.error(error);
+				statusElement.textContent = `Kunne ikke laste kartet: ${error.message}`;
+				municipalityCountElement.textContent = '0';
+				markerCountElement.textContent = '0';
+				cityListElement.innerHTML = '<li class="city-meta">Ingen data kunne vises.</li>';
+				mapElement.innerHTML = '<div style="padding: 24px; color: #66736d; font-family: Arial, sans-serif;">Kartet kunne ikke lastes.</div>';
+			}
+		}
+
+		start();
+	</script>
+</body>
+</html>

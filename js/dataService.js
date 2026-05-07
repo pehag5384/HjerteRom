@@ -1,14 +1,39 @@
-//Her er en funksjon for å hente én spesifikk kommune:
+const municipalitiesUrl = new URL('../data/cities.json', import.meta.url);
+let municipalitiesPromise = null;
+
+async function loadMunicipalities() {
+    if (!municipalitiesPromise) {
+        municipalitiesPromise = fetch(municipalitiesUrl)
+            .then(response => {
+                if (!response.ok) {
+                    throw new Error(`Kunne ikke hente cities.json (${response.status})`);
+                }
+
+                return response.json();
+            })
+            .then(data => Array.isArray(data.municipalities) ? data.municipalities : []);
+    }
+
+    return municipalitiesPromise;
+}
 
 export const dataService = {
+    async getMunicipalities() {
+        try {
+            return await loadMunicipalities();
+        } catch (error) {
+            console.error('Feil ved henting av kommuneliste:', error);
+            return [];
+        }
+    },
+
     async getMunicipalityById(id) {
         try {
-            const response = await fetch('../data/cities.json');
-            const data = await response.json();
-            // Finner den kommunen som matcher ID-en i URL-en
-            return data.municipalities.find(m => m.id === id);
+            const municipalities = await loadMunicipalities();
+            return municipalities.find(municipality => municipality.id === id);
         } catch (error) {
-            console.error("Feil ved henting av kommunedata:", error);
+            console.error('Feil ved henting av kommunedata:', error);
+            return undefined;
         }
     }
 };
