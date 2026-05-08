@@ -5,7 +5,7 @@
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
   <title>City - HjerteRom</title>
   <link rel="stylesheet" href="main.css">
-  <link rel="stylsheet" href="components.css">
+  <link rel="stylesheet" href="components.css">
 
 </head>
 
@@ -22,7 +22,7 @@
     </section>
 
     <section class="map-search-section">
-      <h2>Kart over <span = id="mapAreaName"></span></h2>
+      <h2>Kart over <span id="mapAreaName"></span></h2>
       
       <div class="map-search-row">
 
@@ -33,17 +33,78 @@
       </div>
     </section>
 
-    
+
     <section class="map-section">
 
       <div class="map-container" id="mapContainer">
       </div>
 
     </section>
+    
+
+    <section class="score-section" id="scoreSection">
+
+      <div class="score-card">
+        <p id="overallScore"></p>
+        <span>Helhetlig vurdering</span>
+      </div>
+
+      <div class="score-card">
+        <p id="facilityScore"></p>
+        <span>Fasiliteter</span>
+      </div>
+
+      <div class="score-card">
+        <p id="satisfactionScore"></p>
+        <span>Tilfredshet</span>
+      </div>
+
+    </section>
+    
+
+    <section class="info-section">
+
+      <article class="info-card" id="elderCareInfo">
+        <h2>Eldreomsorg i kommunen</h2>
+        
+        <ul id="elderCareList"></ul>
+        
+        <div id="elderCareChart"></div>
+      </article>
+
+      <article class="info-card" id="transportInfo">
+        <h2>Kollektivtransport</h2>
+        
+        <ul id="transportList"></ul>
+      </article>
+
+    </section>
+
+
+    <section class="accordion-section">
+      
+      <button class="accordion-btn" id="careCenterBtn">
+        Omsorgssentre
+      </button>
+
+      <button class="accordion-btn" id="nursingHomesBtn">
+        Sykehjem
+      </button>
+
+      <button class="accordion-btn" id="cultureBtn">
+        Kulturtilbud
+      </button>
+
+      <button class="accordion-btn" id="healthServicesBtn">
+        Helsetjenester
+      </button>
+
+    </section>
+    
+    <footer class="footer" id="footer"></footer>
 
   </main>
 
-
-
+  <script src="app.js"></script>
 </body>
 </html>
