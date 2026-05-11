@@ -13,6 +13,60 @@ export const dataService = {
     }
 };
 
+//OMSORGSSENTER
+
+export const dataService = {
+    // Hjelpefunksjon for å laste JSON-filer
+    async fetchData(url) {
+        try {
+            const response = await fetch(url);
+            if (!response.ok) throw new Error(`Kunne ikke hente: ${url}`);
+            return await response.json();
+        } catch (error) {
+            console.error("Datafeil:", error);
+            return null;
+        }
+    },
+
+    // 1. Henter alle omsorgssentre i en spesifikk kommune
+    async getCentersByMunicipality(municipalityId) {
+        const data = await this.fetchData('../data/carecenters.json');
+        if (!data) return [];
+        // Filtrerer slik at vi bare får sentrene som hører til valgt by
+        return data.care_centers.filter(center => center.municipality_id === municipalityId);
+    },
+
+    // 2. Henter ett spesifikt senter med ALL info (inkludert ratings)
+    async getFullCenterDetails(centerId) {
+        const [centersData, ratingsData] = await Promise.all([
+            this.fetchData('../data/carecenters.json'),
+            this.fetchData('../data/ratings.json')
+        ]);
+
+        if (!centersData || !ratingsData) return null;
+
+        const center = centersData.care_centers.find(c => c.id === centerId);
+        const rating = ratingsData.ratings.find(r => r.center_id === centerId);
+
+        if (!center) return null;
+
+        // Slår sammen dataene til ett objekt
+        return {
+            ...center,
+            rating_info: rating || { average_rating: 0, user_reviews: [], scores: {} }
+        };
+    },
+
+    // 3. Henter kun anmeldelser for et senter (hvis man trenger det separat)
+    async getReviewsForCenter(centerId) {
+        const data = await this.fetchData('../data/ratings.json');
+        if (!data) return null;
+        const rating = data.ratings.find(r => r.center_id === centerId);
+        return rating ? rating.user_reviews : [];
+    }
+};
+
+
 /**
  * dataService.js
  *
