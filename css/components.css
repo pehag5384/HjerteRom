@@ -163,3 +163,29 @@
 
     z-index: 1000;
 }
+
+.search-bar {
+    display: flex;
+    align-items: center;
+    background-color: white;
+    border-radius: 999px;
+    padding: 10px 14px;
+}
+
+.search-icon {
+    margin-right: 8px;
+    color: #888;
+}
+
+.search-input {
+    border: none;
+    outline: none;
+    width: 100%;
+}
+
+.filter-panel{
+    background-color: #F7F1D3;
+    border: 3px solid #617D37;
+    border-radius: 16px;
+    padding: 24px;
+}
