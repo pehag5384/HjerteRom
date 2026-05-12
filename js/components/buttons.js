@@ -3,7 +3,7 @@
 export function Button({
     label = "",
     variant = "primary",
-    icon = ""
+    icon = "",
 }) {
 
     const classes = {
