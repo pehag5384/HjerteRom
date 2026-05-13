@@ -18,7 +18,7 @@ import { dataService } from './dataService.js';
 import { recommend } from './recommendation.js';
 import { appState } from './state.js';
 
-// Midlertidig testflyt (dag 1–2)
+/* // Midlertidig testflyt (dag 1–2)
 // 1) Hardkodet preferanse for én kommune
 // 2) Hent aktiviteter fra dataService
 // 3) Kjør anbefaling
@@ -53,7 +53,7 @@ import { appState } from './state.js';
 
 // Run automatically during development for quick verification
 // Remove or guard behind feature-flag later.
-runRecommendationTest().catch(err => console.error('Test run failed:', err));
+runRecommendationTest().catch(err => console.error('Test run failed:', err)); */
 
 /**
  * app.js har ansvar for:
