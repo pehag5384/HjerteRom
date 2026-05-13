@@ -1,3 +1,4 @@
+//FOR CITIES-SIDEN
 //Her er en funksjon for å hente én spesifikk kommune:
 
 export const dataService = {
@@ -28,6 +29,8 @@ export const dataService = {
         }
     },
 
+//FOR CITY/CARECENTER-SIDEN
+    
     // 1. Henter alle omsorgssentre i en spesifikk kommune
     async getCentersByMunicipality(municipalityId) {
         const data = await this.fetchData('../data/carecenters.json');

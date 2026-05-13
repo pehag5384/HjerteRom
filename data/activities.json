@@ -1,1 +1,143 @@
-[]
+{
+  "activities": [
+    {
+      "id": "bergen-dansesenter",
+      "municipality_id": "bergen",
+      "category": "Trening & Dans",
+      "title": "Bergen Dansesenter",
+      "description": "Dansesenteret tilbyr flere kurs for seniorer og voksne på Georgernes Verft, inkludert Dans 65+ og improvisasjon.",
+      "long_description": "Dans 65+ er tilpasset seniorer med fokus på tempo, pust, koordinasjon og balanse. Inspirert av samtidsdans og jazz.",
+      "location": {
+        "name": "Georgernes Verft",
+        "address": "USF Verftet"
+      },
+      "contact": {
+        "phone": "55 32 08 66",
+        "email": "post@bergen-dansesenter.no"
+      },
+      "link": "https://www.bergen-dansesenter.no"
+    },
+    {
+      "id": "bergen-kulturforum",
+      "municipality_id": "bergen",
+      "category": "Kultur",
+      "title": "Bergen Kulturforum (BKF)",
+      "description": "Frivillig organisasjon som arrangerer rimelige og varierte kulturtilbud til de godt voksne.",
+      "location": {
+        "address": "Kong Oscarsgate 15"
+      },
+      "contact": {
+        "phone": "94 82 82 98",
+        "email": "post@bergenkulturforum.no"
+      }
+    },
+    {
+      "id": "dnt-senior-bergen",
+      "municipality_id": "bergen",
+      "category": "Natur & Tur",
+      "title": "DNT Seniorgruppen",
+      "description": "Varierte fellesturer i Byfjellene og omegn for alle over 60 år.",
+      "long_description": "Inkluderer 'Aktiv til 100' (rolige turer på grusvei) og ukentlige mandags- og onsdagsturer. Gratis og ingen påmelding.",
+      "location": {
+        "name": "Tursenteret",
+        "address": "Tverrgaten 4-6"
+      },
+      "contact": {
+        "phone": "55 33 58 10",
+        "email": "senior.bergen@dnt.no"
+      }
+    },
+    {
+      "id": "datakafe-danckert-krohn",
+      "municipality_id": "bergen",
+      "category": "Teknologi",
+      "title": "Datakafé",
+      "description": "Lær om digitale verktøy og tjenester som brukes i hverdagen.",
+      "time": "Tirsdager kl. 13.00-15.00",
+      "location": {
+        "name": "Kulturhuset Danckert Krohn",
+        "address": "Kong Oscars gate 54"
+      }
+    },
+    {
+      "id": "hovedbiblioteket-aktiviteter",
+      "municipality_id": "bergen",
+      "category": "Kultur",
+      "title": "Bergen Offentlige Bibliotek",
+      "description": "Et bredt tilbud med Mandagsfilm, Litterær lunsj og Fiksetorsdag.",
+      "long_description": "Her kan du få datahjelp, delta i lesegrupper på lett norsk, eller drive med slektsgransking.",
+      "location": {
+        "name": "Hovedbiblioteket",
+        "address": "Strømgaten 6"
+      },
+      "contact": {
+        "phone": "55 56 85 00"
+      }
+    },
+    {
+      "id": "kulturhuset-danckert-krohn",
+      "municipality_id": "bergen",
+      "category": "Sosialt & Kultur",
+      "title": "Kulturhuset Danckert Krohn",
+      "description": "Et nyoppusset kulturhus med kafé, hage og et vell av faste grupper.",
+      "activities_list": ["Malekurs", "Billedvev", "Bridge", "Seniordans", "Tango"],
+      "location": {
+        "address": "Kong Oscars gate 54"
+      },
+      "contact": {
+        "phone": "55 56 42 00"
+      }
+    },
+    {
+      "id": "sterk-og-stodig",
+      "municipality_id": "bergen",
+      "category": "Trening & Helse",
+      "title": "Sterk og stødig",
+      "description": "Styrke- og balansetrening for seniorer som er litt ustø.",
+      "long_description": "Trening i grupper med fokus på beinstyrke og balanse. Foregår flere steder som Vitalitetssenteret og Norrønahallen.",
+      "contact": {
+        "phone": "53 03 53 80"
+      }
+    },
+    {
+      "id": "sandviken-seniorsenter",
+      "municipality_id": "bergen",
+      "category": "Sosialt",
+      "title": "Sandviken Seniorsenter",
+      "description": "Et sosialt knutepunkt med bingo, quiz, sangstunder og 'Fisketirsdag'.",
+      "location": {
+        "address": "Helgesensgt 2"
+      },
+      "contact": {
+        "phone": "55 32 75 75",
+        "email": "sandviken.senior@gmail.com"
+      }
+    },
+    {
+      "id": "bergen-pensjonistorkester",
+      "municipality_id": "bergen",
+      "category": "Musikk",
+      "title": "Bergen Pensjonistorkester",
+      "description": "Salongorkester for strykere, blåsere og piano. Nye medlemmer velkomne.",
+      "time": "Øving tirsdager kl. 12.30–14.30",
+      "location": {
+        "name": "Kulturhuset Danckert Krohn"
+      },
+      "contact": {
+        "phone": "99 43 71 70"
+      }
+    },
+    {
+      "id": "generasjon-festival",
+      "municipality_id": "bergen",
+      "category": "Festival",
+      "title": "Generasjon - en aldringsfestival",
+      "description": "Årlig festival under Festspillene med debatter, kunst og mesterklasser.",
+      "time": "29. og 30. mai 2026",
+      "location": {
+        "name": "Litteraturhuset i Bergen"
+      },
+      "link": "https://generasjonsfestivalen.no"
+    }
+  ]
+}

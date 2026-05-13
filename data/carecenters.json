@@ -1,1 +1,1099 @@
-[]
+{
+  "care_centers": [
+    {
+      "id": "sotra-omsorgssenter",
+      "municipality_id": "bergen",
+      "name": "Sotra omsorgssenter",
+      "location_summary": "Sotra, Bergen",
+      "address": "Ekerhovdvegen 2",
+      "nearest_hospital": "Haukeland",
+      "image_url": "assets/images/centers/sotra.jpg",
+      "map_info": {
+        "distance_km": 12,
+        "travel_time_min": 20,
+        "coordinates": { "lat": 60.3521, "lng": 5.1245 }
+      },
+      "quick_info": {
+        "beds": 120,
+        "waiting_time": "2-4 måneder",
+        "tags": ["Langtidsopphold", "Rehabilitering"]
+      },
+      "about": "Sotra omsorgssenter ligger vakkert til med utsikt over skjærgården.",
+      "services": [
+        "Døgnkontinuerlig pleie",
+        "Fysioterapi",
+        "Kulturelle utflukter"
+      ],
+      "opening_hours": {
+        "weekday": "08:00 - 16:00",
+        "weekend": "10:00 - 14:00",
+        "note": "Akutt hjelp 24/7"
+      },
+      "practical_info": {
+        "price_per_month": 30000,
+        "care_type": "Langtid",
+        "room_count": "45 rom",
+        "established_year": 1985,
+        "meals": "3 måltider inkl.",
+        "specialization": "Demens"
+      },
+      "facilities": {
+        "garden": true,
+        "library": true,
+        "gym": true,
+        "wifi": true,
+        "pets_allowed": true,
+        "common_room": true,
+        "kitchen": true,
+        "hairdresser": true,
+        "pool": false,
+        "parking": true,
+        "elevator": true
+      }
+    },
+    {
+      "id": "landas-omsorgssenter",
+      "municipality_id": "bergen",
+      "name": "Landås omsorgssenter",
+      "location_summary": "Landås, Bergen",
+      "address": "Landåssvingen 15",
+      "nearest_hospital": "Haukeland",
+      "image_url": "assets/images/centers/landas.jpg",
+      "map_info": {
+        "distance_km": 4,
+        "travel_time_min": 10,
+        "coordinates": { "lat": 60.3601, "lng": 5.3582 }
+      },
+      "quick_info": {
+        "beds": 105,
+        "waiting_time": "3-4 måneder",
+        "tags": ["Langtidsopphold", "Korttid"]
+      },
+      "about": "Et urbant senter med fokus på fellesskap og nærhet til byens fasiliteter.",
+      "services": ["Ergoterapi", "Sosiale grupper", "Legetjeneste"],
+      "opening_hours": {
+        "weekday": "08:00 - 15:30",
+        "weekend": "11:00 - 14:00",
+        "note": "Besøkstid hele døgnet"
+      },
+      "practical_info": {
+        "price_per_month": 28500,
+        "care_type": "Kombinert",
+        "room_count": "90 rom",
+        "established_year": 1992,
+        "meals": "Full kost",
+        "specialization": "Somatikk"
+      },
+      "facilities": {
+        "garden": true,
+        "library": false,
+        "gym": true,
+        "wifi": true,
+        "pets_allowed": false,
+        "common_room": true,
+        "kitchen": true,
+        "hairdresser": true,
+        "pool": false,
+        "parking": true,
+        "elevator": true
+      }
+    },
+    {
+      "id": "fyllingsdalen-omsorg",
+      "municipality_id": "bergen",
+      "name": "Fyllingsdalen omsorgssenter",
+      "location_summary": "Fyllingsdalen, Bergen",
+      "address": "Dag Hammarskjölds vei 90",
+      "nearest_hospital": "Haukeland",
+      "image_url": "assets/images/centers/fyllingsdalen.jpg",
+      "map_info": {
+        "distance_km": 7,
+        "travel_time_min": 15,
+        "coordinates": { "lat": 60.345, "lng": 5.289 }
+      },
+      "quick_info": {
+        "beds": 110,
+        "waiting_time": "4-6 måneder",
+        "tags": ["Rehabilitering", "Langtid"]
+      },
+      "about": "Moderne bygg med store fellesarealer og fokus på beboernes selvstendighet.",
+      "services": ["Sykepleie", "Aktivitetsprogram", "Sansehage"],
+      "opening_hours": {
+        "weekday": "09:00 - 16:00",
+        "weekend": "10:00 - 15:00",
+        "note": "Åpent for pårørende"
+      },
+      "practical_info": {
+        "price_per_month": 31000,
+        "care_type": "Langtid",
+        "room_count": "110 rom",
+        "established_year": 2010,
+        "meals": "3 måltider inkl.",
+        "specialization": "Rehabilitering"
+      },
+      "facilities": {
+        "garden": true,
+        "library": true,
+        "gym": true,
+        "wifi": true,
+        "pets_allowed": true,
+        "common_room": true,
+        "kitchen": false,
+        "hairdresser": true,
+        "pool": true,
+        "parking": true,
+        "elevator": true
+      }
+    },
+
+    {
+      "id": "uranienborg-hjem",
+      "municipality_id": "oslo",
+      "name": "Uranienborghjemmet",
+      "location_summary": "Frogner, Oslo",
+      "address": "Niels Juels gate 38",
+      "nearest_hospital": "Ullevål",
+      "image_url": "assets/images/centers/uranienborg.jpg",
+      "map_info": {
+        "distance_km": 2,
+        "travel_time_min": 5,
+        "coordinates": { "lat": 59.9205, "lng": 10.718 }
+      },
+      "quick_info": {
+        "beds": 95,
+        "waiting_time": "6-12 måneder",
+        "tags": ["Langtid", "Høy standard"]
+      },
+      "about": "Sentralt plassert på Frogner med fokus på kulturelle opplevelser.",
+      "services": ["Eget kjøkken", "Musikkterapi", "Fotpleie"],
+      "opening_hours": {
+        "weekday": "08:00 - 16:00",
+        "weekend": "10:00 - 16:00",
+        "note": "Kafé på stedet"
+      },
+      "practical_info": {
+        "price_per_month": 35000,
+        "care_type": "Langtid",
+        "room_count": "95 rom",
+        "established_year": 1960,
+        "meals": "Gourmet",
+        "specialization": "Livsglede"
+      },
+      "facilities": {
+        "garden": true,
+        "library": true,
+        "gym": false,
+        "wifi": true,
+        "pets_allowed": false,
+        "common_room": true,
+        "kitchen": true,
+        "hairdresser": true,
+        "pool": false,
+        "parking": false,
+        "elevator": true
+      }
+    },
+    {
+      "id": "nordseter-hjem",
+      "municipality_id": "oslo",
+      "name": "Nordseter hjemmet",
+      "location_summary": "Nordstrand, Oslo",
+      "address": "Ekebergveien 243",
+      "nearest_hospital": "Rikshospitalet",
+      "image_url": "assets/images/centers/nordseter.jpg",
+      "map_info": {
+        "distance_km": 8,
+        "travel_time_min": 15,
+        "coordinates": { "lat": 59.865, "lng": 10.801 }
+      },
+      "quick_info": {
+        "beds": 140,
+        "waiting_time": "3-5 måneder",
+        "tags": ["Demens", "Skjermet avdeling"]
+      },
+      "about": "Rolige omgivelser med flott utsikt over Oslofjorden.",
+      "services": ["Demenspleie", "Turrunder", "Prestetjeneste"],
+      "opening_hours": {
+        "weekday": "08:00 - 16:00",
+        "weekend": "10:00 - 14:00",
+        "note": "Vaktsamarbeid"
+      },
+      "practical_info": {
+        "price_per_month": 29000,
+        "care_type": "Langtid",
+        "room_count": "140 rom",
+        "established_year": 1980,
+        "meals": "Alle måltider",
+        "specialization": "Demens"
+      },
+      "facilities": {
+        "garden": true,
+        "library": true,
+        "gym": true,
+        "wifi": true,
+        "pets_allowed": true,
+        "common_room": true,
+        "kitchen": true,
+        "hairdresser": false,
+        "pool": false,
+        "parking": true,
+        "elevator": true
+      }
+    },
+    {
+      "id": "st-hanshaugen-omsorg",
+      "municipality_id": "oslo",
+      "name": "St. Hanshaugen omsorgssenter",
+      "location_summary": "Oslo Sentrum",
+      "address": "Colletts gate 54",
+      "nearest_hospital": "Lovisenberg",
+      "image_url": "assets/images/centers/hanshaugen.jpg",
+      "map_info": {
+        "distance_km": 1,
+        "travel_time_min": 5,
+        "coordinates": { "lat": 59.927, "lng": 10.74 }
+      },
+      "quick_info": {
+        "beds": 80,
+        "waiting_time": "5-9 måneder",
+        "tags": ["Sentralt", "Kultur"]
+      },
+      "about": "Et urbant senter med umiddelbar tilgang til parker og byliv.",
+      "services": ["Legetjeneste", "Fysioterapi", "Sosial kontakt"],
+      "opening_hours": {
+        "weekday": "08:00 - 16:00",
+        "weekend": "11:00 - 15:00",
+        "note": "Besøksvennlig"
+      },
+      "practical_info": {
+        "price_per_month": 31000,
+        "care_type": "Langtid",
+        "room_count": "80 rom",
+        "established_year": 1995,
+        "meals": "3 måltider",
+        "specialization": "Generell pleie"
+      },
+      "facilities": {
+        "garden": true,
+        "library": true,
+        "gym": true,
+        "wifi": true,
+        "pets_allowed": true,
+        "common_room": true,
+        "kitchen": true,
+        "hairdresser": true,
+        "pool": false,
+        "parking": false,
+        "elevator": true
+      }
+    },
+
+    {
+      "id": "nidarvoll-helse",
+      "municipality_id": "trondheim",
+      "name": "Nidarvoll helsehus",
+      "location_summary": "Nidarvoll, Trondheim",
+      "address": "Bratsbergvegen 10",
+      "nearest_hospital": "St. Olavs",
+      "image_url": "assets/images/centers/nidarvoll.jpg",
+      "map_info": {
+        "distance_km": 5,
+        "travel_time_min": 12,
+        "coordinates": { "lat": 63.401, "lng": 10.402 }
+      },
+      "quick_info": {
+        "beds": 72,
+        "waiting_time": "2-3 måneder",
+        "tags": ["Korttid", "Rehab"]
+      },
+      "about": "Spesialisert på opptrening etter sykehusopphold.",
+      "services": ["Intensiv fysioterapi", "Legeoppfølging"],
+      "opening_hours": {
+        "weekday": "07:00 - 22:00",
+        "weekend": "09:00 - 21:00",
+        "note": "Fokus på aktivitet"
+      },
+      "practical_info": {
+        "price_per_month": 27000,
+        "care_type": "Korttid",
+        "room_count": "72 rom",
+        "established_year": 2018,
+        "meals": "Proteinrik",
+        "specialization": "Rehabilitering"
+      },
+      "facilities": {
+        "garden": false,
+        "library": false,
+        "gym": true,
+        "wifi": true,
+        "pets_allowed": false,
+        "common_room": true,
+        "kitchen": false,
+        "hairdresser": false,
+        "pool": true,
+        "parking": true,
+        "elevator": true
+      }
+    },
+    {
+      "id": "ila-omsorg",
+      "municipality_id": "trondheim",
+      "name": "Ila omsorgssenter",
+      "location_summary": "Ila, Trondheim",
+      "address": "Ilevollen 10",
+      "nearest_hospital": "St. Olavs",
+      "image_url": "assets/images/centers/ila.jpg",
+      "map_info": {
+        "distance_km": 2,
+        "travel_time_min": 5,
+        "coordinates": { "lat": 63.43, "lng": 10.37 }
+      },
+      "quick_info": {
+        "beds": 60,
+        "waiting_time": "5-7 måneder",
+        "tags": ["Langtid", "Sosialt"]
+      },
+      "about": "Sentralt plassert med gangavstand til trikk og parkområder.",
+      "services": ["Velferdsteknologi", "Fellesmiddag"],
+      "opening_hours": {
+        "weekday": "08:00 - 16:00",
+        "weekend": "12:00 - 16:00",
+        "note": "Trivelig lokalmiljø"
+      },
+      "practical_info": {
+        "price_per_month": 29500,
+        "care_type": "Langtid",
+        "room_count": "60 rom",
+        "established_year": 1975,
+        "meals": "Hjemmelaget",
+        "specialization": "Somatikk"
+      },
+      "facilities": {
+        "garden": true,
+        "library": true,
+        "gym": false,
+        "wifi": true,
+        "pets_allowed": true,
+        "common_room": true,
+        "kitchen": true,
+        "hairdresser": true,
+        "pool": false,
+        "parking": false,
+        "elevator": true
+      }
+    },
+    {
+      "id": "ranheim-hjem",
+      "municipality_id": "trondheim",
+      "name": "Ranheim sykehjem",
+      "location_summary": "Ranheim, Trondheim",
+      "address": "Ranheimsvegen 180",
+      "nearest_hospital": "St. Olavs",
+      "image_url": "assets/images/centers/ranheim.jpg",
+      "map_info": {
+        "distance_km": 10,
+        "travel_time_min": 15,
+        "coordinates": { "lat": 63.428, "lng": 10.53 }
+      },
+      "quick_info": {
+        "beds": 90,
+        "waiting_time": "3-5 måneder",
+        "tags": ["Fjordutsikt", "Demens"]
+      },
+      "about": "Flott beliggenhet ved Trondheimsfjorden med fokus på utendørsaktiviteter.",
+      "services": ["Hagebruk", "Sykepleie", "Aktivitør"],
+      "opening_hours": {
+        "weekday": "08:00 - 16:00",
+        "weekend": "10:00 - 14:00",
+        "note": "Åpent for alle"
+      },
+      "practical_info": {
+        "price_per_month": 30000,
+        "care_type": "Langtid",
+        "room_count": "90 rom",
+        "established_year": 2012,
+        "meals": "Lokal kost",
+        "specialization": "Demens"
+      },
+      "facilities": {
+        "garden": true,
+        "library": true,
+        "gym": true,
+        "wifi": true,
+        "pets_allowed": true,
+        "common_room": true,
+        "kitchen": true,
+        "hairdresser": true,
+        "pool": false,
+        "parking": true,
+        "elevator": true
+      }
+    },
+
+    {
+      "id": "madla-omsorg",
+      "municipality_id": "stavanger",
+      "name": "Madla omsorgssenter",
+      "location_summary": "Madla, Stavanger",
+      "address": "Madlamarkveien 10",
+      "nearest_hospital": "SUS",
+      "image_url": "assets/images/centers/madla.jpg",
+      "map_info": {
+        "distance_km": 4,
+        "travel_time_min": 8,
+        "coordinates": { "lat": 58.945, "lng": 5.689 }
+      },
+      "quick_info": {
+        "beds": 85,
+        "waiting_time": "3-4 måneder",
+        "tags": ["Trygghetsbolig", "Langtid"]
+      },
+      "about": "Nærhet til sjø og gode turområder rundt Store Stokkavatn.",
+      "services": ["Sykepleie", "Turvenner"],
+      "opening_hours": {
+        "weekday": "08:30 - 15:30",
+        "weekend": "10:00 - 15:00",
+        "note": "Bilvennlig"
+      },
+      "practical_info": {
+        "price_per_month": 28000,
+        "care_type": "Langtid",
+        "room_count": "85 rom",
+        "established_year": 2002,
+        "meals": "Standard",
+        "specialization": "Geriatri"
+      },
+      "facilities": {
+        "garden": true,
+        "library": true,
+        "gym": true,
+        "wifi": true,
+        "pets_allowed": true,
+        "common_room": true,
+        "kitchen": true,
+        "hairdresser": true,
+        "pool": false,
+        "parking": true,
+        "elevator": true
+      }
+    },
+    {
+      "id": "eiganes-omsorg",
+      "municipality_id": "stavanger",
+      "name": "Eiganes omsorgssenter",
+      "location_summary": "Eiganes, Stavanger",
+      "address": "Eiganesveien 95",
+      "nearest_hospital": "SUS",
+      "image_url": "assets/images/centers/eiganes.jpg",
+      "map_info": {
+        "distance_km": 2,
+        "travel_time_min": 5,
+        "coordinates": { "lat": 58.962, "lng": 5.715 }
+      },
+      "quick_info": {
+        "beds": 65,
+        "waiting_time": "5-8 måneder",
+        "tags": ["Høy trivsel", "Sentralt"]
+      },
+      "about": "Eksklusiv beliggenhet i et attraktivt nabolag.",
+      "services": ["Individuell pleie", "Konserter"],
+      "opening_hours": {
+        "weekday": "08:00 - 17:00",
+        "weekend": "10:00 - 17:00",
+        "note": "Høy bemanning"
+      },
+      "practical_info": {
+        "price_per_month": 34000,
+        "care_type": "Langtid",
+        "room_count": "65 rom",
+        "established_year": 1998,
+        "meals": "Egen kokk",
+        "specialization": "Sosial omsorg"
+      },
+      "facilities": {
+        "garden": true,
+        "library": true,
+        "gym": false,
+        "wifi": true,
+        "pets_allowed": false,
+        "common_room": true,
+        "kitchen": true,
+        "hairdresser": true,
+        "pool": false,
+        "parking": true,
+        "elevator": true
+      }
+    },
+
+    {
+      "id": "hovik-hjem",
+      "municipality_id": "baerum",
+      "name": "Høvikheimen",
+      "location_summary": "Høvik, Bærum",
+      "address": "Sandviksveien 120",
+      "nearest_hospital": "Bærum Sykehus",
+      "image_url": "assets/images/centers/hovik.jpg",
+      "map_info": {
+        "distance_km": 5,
+        "travel_time_min": 7,
+        "coordinates": { "lat": 59.897, "lng": 10.582 }
+      },
+      "quick_info": {
+        "beds": 90,
+        "waiting_time": "4-9 måneder",
+        "tags": ["Rolig", "Senior"]
+      },
+      "about": "Fredelige omgivelser nær sjøen på Høvik.",
+      "services": ["Sykepleie", "Hagearbeid"],
+      "opening_hours": {
+        "weekday": "08:00 - 16:00",
+        "weekend": "10:00 - 15:00",
+        "note": "Privat/kommunalt"
+      },
+      "practical_info": {
+        "price_per_month": 33000,
+        "care_type": "Langtid",
+        "room_count": "90 rom",
+        "established_year": 1988,
+        "meals": "Klassisk",
+        "specialization": "Livskvalitet"
+      },
+      "facilities": {
+        "garden": true,
+        "library": true,
+        "gym": true,
+        "wifi": true,
+        "pets_allowed": true,
+        "common_room": true,
+        "kitchen": true,
+        "hairdresser": true,
+        "pool": false,
+        "parking": true,
+        "elevator": true
+      }
+    },
+    {
+      "id": "bekkestua-omsorg",
+      "municipality_id": "baerum",
+      "name": "Bekkestua omsorgsboliger",
+      "location_summary": "Bekkestua, Bærum",
+      "address": "Gamle Ringeriksvei 44",
+      "nearest_hospital": "Bærum Sykehus",
+      "image_url": "assets/images/centers/bekkestua.jpg",
+      "map_info": {
+        "distance_km": 3,
+        "travel_time_min": 5,
+        "coordinates": { "lat": 59.916, "lng": 10.588 }
+      },
+      "quick_info": {
+        "beds": 50,
+        "waiting_time": "6-10 måneder",
+        "tags": ["Urban", "Moderne"]
+      },
+      "about": "Moderne leiligheter med tilgang til pleie rett ved Bekkestua sentrum.",
+      "services": ["Hjemmesykepleie", "Sosiale treff"],
+      "opening_hours": {
+        "weekday": "09:00 - 15:00",
+        "weekend": "Stengt adm.",
+        "note": "Sentral beliggenhet"
+      },
+      "practical_info": {
+        "price_per_month": 36000,
+        "care_type": "Omsorgsbolig",
+        "room_count": "50 rom",
+        "established_year": 2015,
+        "meals": "Selvhushold/felles",
+        "specialization": "Selvstendighet"
+      },
+      "facilities": {
+        "garden": false,
+        "library": true,
+        "gym": true,
+        "wifi": true,
+        "pets_allowed": true,
+        "common_room": true,
+        "kitchen": true,
+        "hairdresser": false,
+        "pool": false,
+        "parking": true,
+        "elevator": true
+      }
+    },
+
+    {
+      "id": "lindum-omsorg",
+      "municipality_id": "drammen",
+      "name": "Lindum omsorgssenter",
+      "location_summary": "Lindum, Drammen",
+      "address": "Lindumveien 20",
+      "nearest_hospital": "Drammen Sykehus",
+      "image_url": "assets/images/centers/lindum.jpg",
+      "map_info": {
+        "distance_km": 6,
+        "travel_time_min": 12,
+        "coordinates": { "lat": 59.73, "lng": 10.25 }
+      },
+      "quick_info": {
+        "beds": 100,
+        "waiting_time": "2-4 måneder",
+        "tags": ["Aktivitet", "Natur"]
+      },
+      "about": "Fokus på friluftsliv og meningsfylt hverdag i skogkanten.",
+      "services": ["Fysioterapi", "Grilling"],
+      "opening_hours": {
+        "weekday": "08:30 - 16:30",
+        "weekend": "11:00 - 16:00",
+        "note": "Hund er velkommen"
+      },
+      "practical_info": {
+        "price_per_month": 27500,
+        "care_type": "Langtid",
+        "room_count": "100 rom",
+        "established_year": 2004,
+        "meals": "3 måltider",
+        "specialization": "Fysisk helse"
+      },
+      "facilities": {
+        "garden": true,
+        "library": false,
+        "gym": true,
+        "wifi": true,
+        "pets_allowed": true,
+        "common_room": true,
+        "kitchen": false,
+        "hairdresser": true,
+        "pool": false,
+        "parking": true,
+        "elevator": true
+      }
+    },
+    {
+      "id": "bragernes-hjem",
+      "municipality_id": "drammen",
+      "name": "Bragernes sykehjem",
+      "location_summary": "Bragernes, Drammen",
+      "address": "Hauges gate 92",
+      "nearest_hospital": "Drammen Sykehus",
+      "image_url": "assets/images/centers/bragernes.jpg",
+      "map_info": {
+        "distance_km": 1,
+        "travel_time_min": 3,
+        "coordinates": { "lat": 59.745, "lng": 10.2 }
+      },
+      "quick_info": {
+        "beds": 85,
+        "waiting_time": "5-7 måneder",
+        "tags": ["Sentrumsnært", "Kultur"]
+      },
+      "about": "Tradisjonsrikt hjem med flott beliggenhet i hjertet av Drammen.",
+      "services": ["Fotpleie", "Sosialt samvær"],
+      "opening_hours": {
+        "weekday": "08:00 - 16:00",
+        "weekend": "10:00 - 14:00",
+        "note": "By-nært"
+      },
+      "practical_info": {
+        "price_per_month": 29000,
+        "care_type": "Langtid",
+        "room_count": "85 rom",
+        "established_year": 1970,
+        "meals": "Full pensjon",
+        "specialization": "Somatikk"
+      },
+      "facilities": {
+        "garden": true,
+        "library": true,
+        "gym": false,
+        "wifi": true,
+        "pets_allowed": false,
+        "common_room": true,
+        "kitchen": true,
+        "hairdresser": true,
+        "pool": false,
+        "parking": false,
+        "elevator": true
+      }
+    },
+
+    {
+      "id": "vardaasen-omsorg",
+      "municipality_id": "asker",
+      "name": "Vardåsen omsorgssenter",
+      "location_summary": "Borgen, Asker",
+      "address": "Vardåsveien 40",
+      "nearest_hospital": "Bærum Sykehus",
+      "image_url": "assets/images/centers/vardaasen.jpg",
+      "map_info": {
+        "distance_km": 4,
+        "travel_time_min": 10,
+        "coordinates": { "lat": 59.815, "lng": 10.415 }
+      },
+      "quick_info": {
+        "beds": 80,
+        "waiting_time": "4-6 måneder",
+        "tags": ["Utsikt", "Turterreng"]
+      },
+      "about": "Ligger på en høyde med panoramautsikt over Asker.",
+      "services": ["Turgrupper", "Ergoterapi"],
+      "opening_hours": {
+        "weekday": "08:00 - 16:00",
+        "weekend": "10:00 - 15:00",
+        "note": "Flott natur"
+      },
+      "practical_info": {
+        "price_per_month": 32000,
+        "care_type": "Langtid",
+        "room_count": "80 rom",
+        "established_year": 1995,
+        "meals": "Kortreist",
+        "specialization": "Aktiv alderdom"
+      },
+      "facilities": {
+        "garden": true,
+        "library": true,
+        "gym": true,
+        "wifi": true,
+        "pets_allowed": true,
+        "common_room": true,
+        "kitchen": true,
+        "hairdresser": true,
+        "pool": false,
+        "parking": true,
+        "elevator": true
+      }
+    },
+    {
+      "id": "risenga-bo",
+      "municipality_id": "asker",
+      "name": "Risenga bo- og omsorgssenter",
+      "location_summary": "Risenga, Asker",
+      "address": "Risengaveien 20",
+      "nearest_hospital": "Bærum Sykehus",
+      "image_url": "assets/images/centers/risenga.jpg",
+      "map_info": {
+        "distance_km": 1,
+        "travel_time_min": 5,
+        "coordinates": { "lat": 59.828, "lng": 10.435 }
+      },
+      "quick_info": {
+        "beds": 110,
+        "waiting_time": "3-5 måneder",
+        "tags": ["Idrett", "Aktivitet"]
+      },
+      "about": "Ligger i tilknytning til Risenga idrettspark, flott for spreke seniorer.",
+      "services": ["Bassengtrening", "Kafe"],
+      "opening_hours": {
+        "weekday": "08:00 - 20:00",
+        "weekend": "10:00 - 18:00",
+        "note": "Aktivt miljø"
+      },
+      "practical_info": {
+        "price_per_month": 31000,
+        "care_type": "Langtid",
+        "room_count": "110 rom",
+        "established_year": 2008,
+        "meals": "Buffet",
+        "specialization": "Rehabilitering"
+      },
+      "facilities": {
+        "garden": true,
+        "library": true,
+        "gym": true,
+        "wifi": true,
+        "pets_allowed": true,
+        "common_room": true,
+        "kitchen": true,
+        "hairdresser": true,
+        "pool": true,
+        "parking": true,
+        "elevator": true
+      }
+    },
+
+    {
+      "id": "stalsberg-bo",
+      "municipality_id": "lillestrom",
+      "name": "Stalsberg bo- og behandlingssenter",
+      "location_summary": "Strømmen, Lillestrøm",
+      "address": "Stalsbergveien 5",
+      "nearest_hospital": "Ahus",
+      "image_url": "assets/images/centers/stalsberg.jpg",
+      "map_info": {
+        "distance_km": 3,
+        "travel_time_min": 6,
+        "coordinates": { "lat": 59.945, "lng": 11.012 }
+      },
+      "quick_info": {
+        "beds": 115,
+        "waiting_time": "3-5 måneder",
+        "tags": ["Moderne", "Ahus-nær"]
+      },
+      "about": "Topp moderne utstyr og kort vei til sykehus.",
+      "services": ["Digital oppfølging", "Kafe"],
+      "opening_hours": {
+        "weekday": "08:00 - 20:00",
+        "weekend": "09:00 - 18:00",
+        "note": "Nytt bygg"
+      },
+      "practical_info": {
+        "price_per_month": 30500,
+        "care_type": "Langtid",
+        "room_count": "115 rom",
+        "established_year": 2021,
+        "meals": "Buffet",
+        "specialization": "Velferdsteknologi"
+      },
+      "facilities": {
+        "garden": true,
+        "library": true,
+        "gym": true,
+        "wifi": true,
+        "pets_allowed": false,
+        "common_room": true,
+        "kitchen": true,
+        "hairdresser": true,
+        "pool": false,
+        "parking": true,
+        "elevator": true
+      }
+    },
+    {
+      "id": "lillestrom-bo",
+      "municipality_id": "lillestrom",
+      "name": "Lillestrøm bo- og behandlingssenter",
+      "location_summary": "Lillestrøm Sentrum",
+      "address": "Kirkegata 10",
+      "nearest_hospital": "Ahus",
+      "image_url": "assets/images/centers/lillestrom_bo.jpg",
+      "map_info": {
+        "distance_km": 1,
+        "travel_time_min": 3,
+        "coordinates": { "lat": 59.955, "lng": 11.045 }
+      },
+      "quick_info": {
+        "beds": 100,
+        "waiting_time": "4-7 måneder",
+        "tags": ["Sentrum", "Tog-nær"]
+      },
+      "about": "Rett ved kulturhuset og Lillestrøm stasjon.",
+      "services": ["Kulturgrupper", "Sykepleie"],
+      "opening_hours": {
+        "weekday": "08:00 - 16:00",
+        "weekend": "11:00 - 15:00",
+        "note": "Urban trivsel"
+      },
+      "practical_info": {
+        "price_per_month": 29500,
+        "care_type": "Langtid",
+        "room_count": "100 rom",
+        "established_year": 1990,
+        "meals": "Tradisjonell",
+        "specialization": "Somatikk"
+      },
+      "facilities": {
+        "garden": true,
+        "library": true,
+        "gym": false,
+        "wifi": true,
+        "pets_allowed": false,
+        "common_room": true,
+        "kitchen": true,
+        "hairdresser": true,
+        "pool": false,
+        "parking": true,
+        "elevator": true
+      }
+    },
+
+    {
+      "id": "valhalla-omsorg",
+      "municipality_id": "kristiansand",
+      "name": "Valhalla omsorgssenter",
+      "location_summary": "Lund, Kristiansand",
+      "address": "Marviksveien 20",
+      "nearest_hospital": "SSK",
+      "image_url": "assets/images/centers/valhalla.jpg",
+      "map_info": {
+        "distance_km": 2,
+        "travel_time_min": 5,
+        "coordinates": { "lat": 58.152, "lng": 8.012 }
+      },
+      "quick_info": {
+        "beds": 130,
+        "waiting_time": "2-5 måneder",
+        "tags": ["Sjønært", "Stort miljø"]
+      },
+      "about": "Kristiansands største senter, rett ved bystranda.",
+      "services": ["Båtutflukter", "Hobbyrom"],
+      "opening_hours": {
+        "weekday": "08:00 - 16:00",
+        "weekend": "11:00 - 15:00",
+        "note": "Livsglede"
+      },
+      "practical_info": {
+        "price_per_month": 28500,
+        "care_type": "Langtid",
+        "room_count": "130 rom",
+        "established_year": 1982,
+        "meals": "Sørlandskost",
+        "specialization": "Sosialt"
+      },
+      "facilities": {
+        "garden": true,
+        "library": true,
+        "gym": true,
+        "wifi": true,
+        "pets_allowed": true,
+        "common_room": true,
+        "kitchen": true,
+        "hairdresser": true,
+        "pool": false,
+        "parking": true,
+        "elevator": true
+      }
+    },
+    {
+      "id": "presteheia-hjem",
+      "municipality_id": "kristiansand",
+      "name": "Presteheia sykehjem",
+      "location_summary": "Gimlekollen, Kristiansand",
+      "address": "Presteheia 1",
+      "nearest_hospital": "SSK",
+      "image_url": "assets/images/centers/presteheia.jpg",
+      "map_info": {
+        "distance_km": 4,
+        "travel_time_min": 8,
+        "coordinates": { "lat": 58.168, "lng": 8.015 }
+      },
+      "quick_info": {
+        "beds": 80,
+        "waiting_time": "4-6 måneder",
+        "tags": ["Natur", "Rolig"]
+      },
+      "about": "Ligger i et av byens roligste og grønneste områder.",
+      "services": ["Sansehage", "Sykepleie"],
+      "opening_hours": {
+        "weekday": "08:00 - 16:00",
+        "weekend": "10:00 - 14:00",
+        "note": "Fredelig"
+      },
+      "practical_info": {
+        "price_per_month": 29000,
+        "care_type": "Langtid",
+        "room_count": "80 rom",
+        "established_year": 2000,
+        "meals": "Lokalmat",
+        "specialization": "Somatikk"
+      },
+      "facilities": {
+        "garden": true,
+        "library": true,
+        "gym": true,
+        "wifi": true,
+        "pets_allowed": true,
+        "common_room": true,
+        "kitchen": true,
+        "hairdresser": true,
+        "pool": false,
+        "parking": true,
+        "elevator": true
+      }
+    },
+
+    {
+      "id": "onsoy-hjem",
+      "municipality_id": "fredrikstad",
+      "name": "Onsøyheimen",
+      "location_summary": "Gressvik, Fredrikstad",
+      "address": "Storveien 10",
+      "nearest_hospital": "Kalnes",
+      "image_url": "assets/images/centers/onsoy.jpg",
+      "map_info": {
+        "distance_km": 5,
+        "travel_time_min": 10,
+        "coordinates": { "lat": 59.225, "lng": 10.901 }
+      },
+      "quick_info": {
+        "beds": 88,
+        "waiting_time": "3-4 måneder",
+        "tags": ["Maritimt", "Nytt"]
+      },
+      "about": "Helt nyåpnet senter med fokus på lys og luft.",
+      "services": ["Fergeturer", "Sansehage"],
+      "opening_hours": {
+        "weekday": "08:00 - 16:00",
+        "weekend": "10:00 - 14:00",
+        "note": "Moderne"
+      },
+      "practical_info": {
+        "price_per_month": 29800,
+        "care_type": "Langtid",
+        "room_count": "88 rom",
+        "established_year": 2023,
+        "meals": "Lokal",
+        "specialization": "Demens"
+      },
+      "facilities": {
+        "garden": true,
+        "library": true,
+        "gym": true,
+        "wifi": true,
+        "pets_allowed": false,
+        "common_room": true,
+        "kitchen": true,
+        "hairdresser": true,
+        "pool": false,
+        "parking": true,
+        "elevator": true
+      }
+    },
+    {
+      "id": "fredrikstad-hjem",
+      "municipality_id": "fredrikstad",
+      "name": "Fredrikstad sykehjem",
+      "location_summary": "Gamlebyen, Fredrikstad",
+      "address": "Kirkegata 2",
+      "nearest_hospital": "Kalnes",
+      "image_url": "assets/images/centers/fredrikstad_syk.jpg",
+      "map_info": {
+        "distance_km": 1,
+        "travel_time_min": 5,
+        "coordinates": { "lat": 59.21, "lng": 10.95 }
+      },
+      "quick_info": {
+        "beds": 75,
+        "waiting_time": "4-6 måneder",
+        "tags": ["Historisk", "Sentralt"]
+      },
+      "about": "Sjarm og historie i vakre Gamlebyen.",
+      "services": ["Byvandring", "Sosial kontakt"],
+      "opening_hours": {
+        "weekday": "08:00 - 16:00",
+        "weekend": "12:00 - 16:00",
+        "note": "Unik lokasjon"
+      },
+      "practical_info": {
+        "price_per_month": 28000,
+        "care_type": "Langtid",
+        "room_count": "75 rom",
+        "established_year": 1965,
+        "meals": "Tradisjon",
+        "specialization": "Geriatri"
+      },
+      "facilities": {
+        "garden": true,
+        "library": true,
+        "gym": false,
+        "wifi": true,
+        "pets_allowed": true,
+        "common_room": true,
+        "kitchen": true,
+        "hairdresser": true,
+        "pool": false,
+        "parking": false,
+        "elevator": true
+      }
+    }
+  ]
+}
+
