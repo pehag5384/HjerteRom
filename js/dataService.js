@@ -14,6 +14,8 @@ export const dataService = {
     }
 };
 
+//OMSORGSSENTER
+
 export const dataService = {
     // Hjelpefunksjon for å laste JSON-filer
     async fetchData(url) {
@@ -26,6 +28,7 @@ export const dataService = {
             return null;
         }
     },
+
 //FOR CITY/CARECENTER-SIDEN
     
     // 1. Henter alle omsorgssentre i en spesifikk kommune
@@ -65,6 +68,8 @@ export const dataService = {
         return rating ? rating.user_reviews : [];
     }
 };
+
+
 /**
  * dataService.js
  *
