@@ -5,7 +5,43 @@
  *
  * Dette er ren forretningslogikk:
  * - Tar inn data
- * - Gjør beregninger
+*/
+
+// Minimal recommendation pipeline
+// Input: preferences { municipalityId, interests: [] }
+//        datasets { activities: [], cities: [], careCenters: [] }
+// Output: { city: {...}, activities: [...], careCenters: [...] }
+
+export function recommend(preferences = {}, datasets = {}) {
+	const municipalityId = preferences.municipalityId || null;
+	const interests = Array.isArray(preferences.interests) ? preferences.interests : [];
+
+	const cities = datasets.cities || [];
+	const allActivities = datasets.activities || [];
+	const allCareCenters = datasets.careCenters || [];
+
+	// find city object (if available)
+	const city = municipalityId ? cities.find(c => c.id === municipalityId) || { id: municipalityId } : null;
+
+	// Simple filter: keep activities in the municipality and matching any interest string
+	const activities = allActivities.filter(act => {
+		if (!municipalityId || act.municipality_id !== municipalityId) return false;
+		if (interests.length === 0) return true;
+		const text = (act.category + ' ' + (act.title || '')).toLowerCase();
+		return interests.some(i => text.includes(i.toLowerCase()));
+	});
+
+	// For now, careCenters is an empty or filtered list (will be populated later)
+	const careCenters = allCareCenters.filter(cc => cc.municipality_id === municipalityId);
+
+	return {
+		city,
+		activities,
+		careCenters
+	};
+}
+
+/*
  * - Returnerer resultater
  *
  * Prinsipper:
@@ -44,4 +80,3 @@
  * Hvis denne filen kunne kjørt i Node uten browser,
  * er ansvaret riktig plassert.
  */
-``

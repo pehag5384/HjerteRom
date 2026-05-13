@@ -1,20 +1,8 @@
 //FOR CITIES-SIDEN
 //Her er en funksjon for å hente én spesifikk kommune:
 
-export const dataService = {
-    async getMunicipalityById(id) {
-        try {
-            const response = await fetch('../data/cities.json');
-            const data = await response.json();
-            // Finner den kommunen som matcher ID-en i URL-en
-            return data.municipalities.find(m => m.id === id);
-        } catch (error) {
-            console.error("Feil ved henting av kommunedata:", error);
-        }
-    }
-};
-
-//OMSORGSSENTER
+// dataService.js
+// Samler alle data-hjelpefunksjoner i ett eksportert objekt.
 
 export const dataService = {
     // Hjelpefunksjon for å laste JSON-filer
@@ -29,13 +17,29 @@ export const dataService = {
         }
     },
 
-//FOR CITY/CARECENTER-SIDEN
-    
+    // Hent en kommune etter id
+    async getMunicipalityById(id) {
+        const data = await this.fetchData('../data/cities.json');
+        if (!data) return null;
+        return data.municipalities.find(m => m.id === id) || null;
+    },
+
+    // Henter alle aktiviteter (helst bruk getActivitiesByMunicipality)
+    async getAllActivities() {
+        const data = await this.fetchData('../data/activities.json');
+        return data ? data.activities : [];
+    },
+
+    // Henter aktiviteter for en gitt kommune
+    async getActivitiesByMunicipality(municipalityId) {
+        const all = await this.getAllActivities();
+        return all.filter(a => a.municipality_id === municipalityId);
+    },
+
     // 1. Henter alle omsorgssentre i en spesifikk kommune
     async getCentersByMunicipality(municipalityId) {
         const data = await this.fetchData('../data/carecenters.json');
         if (!data) return [];
-        // Filtrerer slik at vi bare får sentrene som hører til valgt by
         return data.care_centers.filter(center => center.municipality_id === municipalityId);
     },
 
@@ -53,7 +57,6 @@ export const dataService = {
 
         if (!center) return null;
 
-        // Slår sammen dataene til ett objekt
         return {
             ...center,
             rating_info: rating || { average_rating: 0, user_reviews: [], scores: {} }
@@ -71,8 +74,7 @@ export const dataService = {
 
 
 /**
- * dataService.js
- *
+
  * Dette er det ENESTE stedet i applikasjonen som:
  * - henter data (API eller lokal JSON)
  * - normaliserer datastruktur
