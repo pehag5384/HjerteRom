@@ -44,6 +44,17 @@ async function loadActivities() {
 loadActivities();
 
 
+// MIDLERTIDIG TEST - slett etterpå
+
+
+const center = await dataService.getFullCenterDetails("sotra-omsorgssenter");
+console.log(center);
+
+document.getElementById("centerName").textContent = center.name;
+document.getElementById("nearestHospital").textContent = center.nearest_hospital;
+document.getElementById("centerAddress").textContent = center.address;
+
+
 
 /**
  * app.js
