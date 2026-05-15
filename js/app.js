@@ -2,6 +2,47 @@ import { Header } from "./components/header.js";
 import { Footer } from "./components/footer.js";
 import { dataService } from './dataService.js';
 import { appState } from './state.js';
+import * as mapService from './mapService.js';
+import { appState } from './state.js';
+
+// Laster Google Maps dynamisk ved runtime fra lokal assets/APIkey.txt
+// Trengs flere steder, så må lastes først
+async function loadGoogleMapsScriptFromAsset(timeout = 10000) {
+    try {
+        const resp = await fetch('../assets/APIkey.txt');
+        const text = await resp.text();
+        const match = text.match(/AIza[0-9A-Za-z\-_]+/);
+        const apiKey = match ? match[0] : null;
+        if (!apiKey) throw new Error('API key not found in assets/APIkey.txt');
+
+        return await new Promise((resolve, reject) => {
+            if (window.google && window.google.maps) return resolve(true);
+            const callbackName = '__hjerteromGoogleMapsReady';
+            window[callbackName] = () => {
+                delete window[callbackName];
+                resolve(true);
+            };
+            const script = document.createElement('script');
+            script.src = `https://maps.googleapis.com/maps/api/js?key=${apiKey}&callback=${callbackName}`;
+            script.async = true;
+            script.defer = true;
+            script.onerror = () => {
+                delete window[callbackName];
+                reject(new Error('Google Maps failed to load'));
+            };
+            document.head.appendChild(script);
+            setTimeout(() => {
+                if (window[callbackName]) {
+                    delete window[callbackName];
+                    reject(new Error('Google Maps load timed out'));
+                }
+            }, timeout);
+        });
+    } catch (err) {
+        console.warn('Could not load Google Maps script from asset:', err);
+        return false;
+    }
+}
 
 // Kjør alltid header og footer
 document.getElementById("header").innerHTML = Header();
@@ -35,13 +76,48 @@ if (page.includes("activities")) {
 
 // ── CARECENTER ──────────────────────────────
 if (page.includes("carecenter")) {
-    const center = await dataService.getFullCenterDetails("sotra-omsorgssenter");
+    const state = appState.getState();
+    const municipalityId = state.results?.city?.id || state.preferences?.municipalityId || "bergen";
+    const municipality = await dataService.getMunicipalityById(municipalityId);
+    const careCenters = await dataService.getCentersByMunicipality(municipalityId);
+    const selectedCenterId = state.results?.careCenters?.[0]?.id || careCenters[0]?.id || "sotra-omsorgssenter";
+    const center = await dataService.getFullCenterDetails(selectedCenterId);
 
     document.getElementById("centerName").textContent = center.name;
     document.getElementById("nearestHospital").textContent = center.nearest_hospital;
     document.getElementById("centerAddress").textContent = center.address;
-    document.getElementById("distanceToCenter").textContent = center.map_info.distance_km + " km";
-    document.getElementById("travelTime").textContent = center.map_info.travel_time_min + " min";
+    // Sett midlertidig tekst mens kartet lastes
+    document.getElementById("distanceToCenter").textContent = "– km";
+    document.getElementById("travelTime").textContent = "–";
+    const endPos = center.map_info.coordinates;
+    const startPos = municipality?.coordinates || endPos;
+
+    // Forsøk å laste Google Maps dynamisk. Hvis det feiler brukes fallback-data.
+    const mapsOk = await loadGoogleMapsScriptFromAsset();
+    if (mapsOk) {
+        try {
+            const map = mapService.createMap('routeMap', startPos.lat, startPos.lng, 12);
+            const info = await mapService.getRouteInfo(map, startPos, endPos);
+            if (info && info.distanceText) {
+                document.getElementById("distanceToCenter").textContent = info.distanceText;
+            }
+            if (info && info.durationText) {
+                document.getElementById("travelTime").textContent = info.durationText;
+            }
+        } catch (err) {
+            console.warn('Kunne ikke hente ruteinfo etter at Maps ble lastet:', err);
+            const mapEl = document.getElementById('routeMap');
+            if (mapEl) mapEl.style.display = 'none';
+            document.getElementById("distanceToCenter").textContent = center.map_info.distance_km + " km";
+            document.getElementById("travelTime").textContent = center.map_info.travel_time_min + " min";
+        }
+    } else {
+        // Skjul kartet om det ikke kan lastes for å fjerne feilmelding-UI
+        const mapEl = document.getElementById('routeMap');
+        if (mapEl) mapEl.style.display = 'none';
+        document.getElementById("distanceToCenter").textContent = center.map_info.distance_km + " km";
+        document.getElementById("travelTime").textContent = center.map_info.travel_time_min + " min";
+    }
     document.getElementById("overallScore").textContent = center.rating_info.scores.overall;
     document.getElementById("facilityScore").textContent = center.rating_info.scores.facilities;
     document.getElementById("satisfactionScore").textContent = center.rating_info.scores.satisfaction;
