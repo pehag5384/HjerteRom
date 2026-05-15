@@ -1,6 +1,6 @@
-import { Header } from "./header.js";
-import { Footer } from "./footer.js";
-import { ActivityCard } from "./cards.js";
+import { Header } from "./components/header.js";
+import { Footer } from "./components/footer.js";
+import { ActivityCard } from "./components/cards.js";
 
 document.getElementById("header").innerHTML = Header();
 
