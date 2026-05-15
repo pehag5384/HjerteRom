@@ -202,3 +202,8 @@
     border-radius: 16px;
     padding: 24px;
 }
+
+.helpers-image {
+    width: 100%;
+    display: block;
+}
