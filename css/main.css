@@ -135,3 +135,95 @@ body {
 .hero p {
     color: #2f4f2f;
 }
+
+
+.hero {
+    height: 320px;
+    background-image: url("../assets/images/hero-home.jpg");
+    background-size: cover;
+    background-position: center;
+    position: relative;
+}
+
+.hero .hero-overlay {
+    background: none;
+    display: flex;
+    flex-direction: column;
+    justify-content: flex-end;
+    align-items: flex-start;
+    padding: 24px;
+    height: 90%;
+}
+
+.hero .hero-overlay p {
+    color: #2f4f2f;
+    font-size: 1rem;
+    font-weight: bold;
+    margin-bottom: 4px;
+}
+
+.hero .hero-overlay h1 {
+    color: #2f4f2f;
+    font-size: 2rem;
+    font-weight: bold;
+    line-height: 1.2;
+}
+
+.hero .hero-overlay span {
+    color: #f57c00;
+}
+
+
+.search-section {
+    padding: 16px;
+}
+
+.search-section input {
+    width: 100%;
+    padding: 12px 20px;
+    border-radius: 999px;
+    border: none;
+    background-color: white;
+    font-size: 0.95rem;
+    box-shadow: 0 2px 6px rgba(0,0,0,0.1);
+}
+
+
+.shortcut-grid {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 12px;
+    padding: 16px;
+}
+
+
+.popular-section {
+    padding: 16px;
+}
+
+.popular-list {
+    display: flex;
+    gap: 12px;
+    overflow-x: auto;
+    scrollbar-width: none;
+}
+
+.popular-list::-webkit-scrollbar {
+    display: none;
+}
+
+.popular-list .care-card {
+    min-width: 160px;
+    max-width: 160px;
+    flex-shrink: 0;
+}
+
+.see-more-btn {
+    background-color: #5d7c3b;
+    color: white;
+    border: none;
+    border-radius: 999px;
+    padding: 12px 32px;
+    margin-top: 16px;
+    display: block;
+}
