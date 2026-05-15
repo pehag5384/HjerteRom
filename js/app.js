@@ -36,38 +36,28 @@ if (page.includes("activities")) {
 if (page.includes("carecenter")) {
     const center = await dataService.getFullCenterDetails("sotra-omsorgssenter");
 
-    // Hero
     document.getElementById("centerName").textContent = center.name;
     document.getElementById("nearestHospital").textContent = center.nearest_hospital;
     document.getElementById("centerAddress").textContent = center.address;
-
-    // Avstand og reisetid
     document.getElementById("distanceToCenter").textContent = center.map_info.distance_km + " km";
     document.getElementById("travelTime").textContent = center.map_info.travel_time_min + " min";
-
-    // Scores
     document.getElementById("overallScore").textContent = center.rating_info.scores.overall;
     document.getElementById("facilityScore").textContent = center.rating_info.scores.facilities;
     document.getElementById("satisfactionScore").textContent = center.rating_info.scores.satisfaction;
-
-    // Om senteret
     document.getElementById("centerDescription").textContent = center.about;
 
-    // Tjenester
     document.getElementById("serviceList").innerHTML =
         center.services.map(s => `<li>${s}</li>`).join("");
 
-    // Åpningstider
     document.getElementById("openingHours").innerHTML = `
         <p>Mandag - Fredag: ${center.opening_hours.weekday}</p>
         <p>Lørdag - Søndag: ${center.opening_hours.weekend}</p>
         <p><em>${center.opening_hours.note}</em></p>
     `;
 
-    // Praktisk info
     document.getElementById("practicalInfoList").innerHTML = `
         <p>Pris pr. måned: ${center.practical_info.price_per_month} kr</p>
-        <p>Ventetid: ${center.practical_info.waiting_time}</p>
+        <p>Ventetid: ${center.quick_info.waiting_time}</p>
         <p>Type omsorg: ${center.practical_info.care_type}</p>
         <p>Antall plasser: ${center.practical_info.room_count}</p>
         <p>Etablert: ${center.practical_info.established_year}</p>
@@ -75,7 +65,6 @@ if (page.includes("carecenter")) {
         <p>Spesialisering: ${center.practical_info.specialization}</p>
     `;
 
-    // Anmeldelser
     document.getElementById("reviewList").innerHTML =
         center.rating_info.user_reviews.map(r => `
             <div class="review-card">
@@ -83,11 +72,30 @@ if (page.includes("carecenter")) {
                 <p>${r.text}</p>
             </div>
         `).join("");
+
+    // Fasiliteter — må være inne i if-blokken!
+    const facilityLabels = {
+        garden: "Hage/uteplass",
+        library: "Bibliotek",
+        gym: "Treningsrom",
+        wifi: "WiFi",
+        pets_allowed: "Kjæledyr tillatt",
+        common_room: "Felles stue",
+        kitchen: "Kjøkken",
+        hairdresser: "Frisør",
+        pool: "Svømmebasseng",
+        parking: "Parkering",
+        elevator: "Heis"
+    };
+
+    document.getElementById("facilityList").innerHTML =
+        Object.entries(center.facilities)
+            .map(([key, value]) => `<div class="facility-item">
+                    <span>${value ? "✓" : "✗"}</span>
+                    <span>${facilityLabels[key]}</span>
+                </div>
+            `).join("");
 }
-
-
-
-
 
 /**
  * app.js har ansvar for:
