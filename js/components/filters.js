@@ -29,10 +29,14 @@ export function FilterChip({
     active = false
 }) {
     return `
-        <button class="
-            filter-chip
-            ${active ? "filter-chip-active" : ""}
-        ">
+        <button
+            type="button"
+            class="
+                filter-chip
+                ${active ? "filter-chip-active" : ""}
+            "
+            data-filter-chip
+        >
             ${label}
         </button>
     `;
@@ -148,7 +152,8 @@ export function FilterPanel() {
                 <div class="flex-grow-1">
                     ${Button({
                         label: "Nullstill",
-                        variant: "secondary"
+                        variant: "secondary",
+                        classname: "reset-filters"
                     })}
                 </div>
 
