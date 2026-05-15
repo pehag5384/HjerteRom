@@ -52,3 +52,29 @@
  * All avansert logikk som "hva er best"
  * skal ligge i recommendation.js – ikke her.
  */
+
+// Minimal in-memory state for the app. Keep API small and synchronous.
+export const appState = (function () {
+	const state = {
+		user: null,
+		preferences: null,
+		results: null
+	};
+
+	return {
+		getState() {
+			return state;
+		},
+		setPreferences(prefs) {
+			state.preferences = prefs;
+		},
+		setRecommendation(result) {
+			state.results = result;
+		},
+		clear() {
+			state.user = null;
+			state.preferences = null;
+			state.results = null;
+		}
+	};
+})();

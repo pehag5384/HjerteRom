@@ -1,11 +1,57 @@
+<!-- Viser aktiviteter filtrert etter brukerpreferanser fra state -->
+
 <!DOCTYPE html>
 <html lang="no">
 <head>
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-  <title>activities – HjerteRom</title>
+  <title>activities - HjerteRom</title>
+  <link rel="stylesheet" href="main.css">
+  <link rel="stylesheet" href="components.css">
 </head>
 <body>
+  <main class="iphone">
+    <header class="header" id="header"></header>
 
+    <section class="activity-hero">
+      <div class="hero-overlay">
+
+        <h1>
+          Aktiviteter i <br>
+          <span id="activityAreaName"></span>
+        </h1>
+
+      </div>
+    </section>
+
+    <section class="intro-section">
+      <p>Her finner du en oversikt over aktiviteter som passer for deg som ønsker å være aktiv,
+        møte andre eller bare nyte en rolig dag i <span id="introAreaName"></span></p>
+    </section>
+
+    <section class="popular-activities-section">
+      <h2>Mest populære</h2>
+
+      <div class="activity-list" id="activityList"></div>
+    </section>
+
+
+    <section class="support-section">
+
+      <div class="support-banner">
+        <h2>Trenger du litt ekstra støtte?</h2>
+      </div>
+
+      <p> Bestill en ledsager som kan følge deg til aktiviteter og være der sammen med deg. </p>
+
+      <div class="helper-list" id="helperList"></div>
+
+    </section>
+
+    <footer class="footer" id="footer"></footer>
+
+  </main>
+
+  <script src="app.js"></script>
 </body>
 </html>

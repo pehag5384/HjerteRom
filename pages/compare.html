@@ -3,9 +3,45 @@
 <head>
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-  <title>compare – HjerteRom</title>
+  <title>Omsorgssentre - HjerteRom</title>
+  <link rel="stylesheet" href="main.css">
+  <link rel="stylesheet" href="components.css">
 </head>
+
 <body>
+  <main class="iphone">
+
+    <header class="header" id="header"></header>
+
+    <section class="list-header-section">
+
+      <div class="list-actions">
+        <button class="back-btn" id="backBtn"></button>
+        <button class="filter-btn" id="filterBtn"></button>
+      </div>
+
+      <h1>Omsorgssenter i <span id="careCenterAreaName"></span></h1>
+      <p>Sammenlign og finn det beste for deg</p>
+
+    </section>
+
+    <section class="filter-section">
+
+      <div class="filter-tabs" id="filterTabs"></div>
+
+    </section>
+
+    <section class="sort-section">
+      <p id="sortInfo"></p>
+    </section>
+
+    <section class="care-center-list" id="careCenterList"></section>
+
+    <footer class="footer" id="footer"></footer>
+
+  </main>
+
+  <script src="app.js"></script>
 
 </body>
 </html>

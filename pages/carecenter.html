@@ -1,11 +1,117 @@
+<!-- Viser anbefalte omsorgssentre basert på state -->
+
 <!DOCTYPE html>
 <html lang="no">
 <head>
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-  <title>carecenter – HjerteRom</title>
+  <title>Carecenter – HjerteRom</title>
+  <link rel="stylesheet" href="main.css">
+  <link rel="stylesheet" href="components.css">
 </head>
 <body>
+  <main class="iphone">
 
-</body>
+    <header class="header" id="header"></header>
+
+    <section class="center-hero">
+      <div class="hero-overlay">
+
+        <h1 id="centerName"></h1>
+
+        <div class="center-meta">
+          <p>Nærmeste sykehus: <span id="nearestHospital"></span></p>
+          <p>Adresse: <span id="centerAddress"></span></p>
+        </div>
+
+      </div>
+    </section>
+
+
+    <section class="route-section">
+      <div class="route-map" id="routeMap"></div>
+
+      <div class="route-info">
+        <p id="distanceToCenter"></p>
+        <p id="travelTime"></p>
+      </div>
+    </section>
+
+    <section class="score-section" id="scoreSection">
+      <div class="score-card">
+        <p id="overallScore"></p>
+        <span>Helhetlig vurdering</span>
+      </div>
+
+      <div class="score-card">
+        <p id="facilityScore"></p>
+        <span>Fasiliteter</span>
+      </div>
+
+      <div class="score-card">
+        <p id="satisfactionScore"></p>
+        <span>Tilfredshet</span>
+      </div>
+    </section>
+    
+
+    <section class="about-section">
+      <h2>Om senteret</h2>
+      <p id="centerDescription"></p>  
+    </section>
+
+    <section class="service-section">
+      <h2>Våre tjenester</h2>
+
+      <ul id="serviceList"></ul>
+    </section>
+
+    <section class="opening-hours-section">
+      <h2>Åpningstider</h2>
+      
+      <div id="openingHours"></div>
+    </section>
+
+    <section class="practical-info-section">
+      <h2>Praktisk informasjon</h2>
+
+      <div class="info-list" id="practicalInfoList"></div>
+    </section>
+
+    <section class="contact-section">
+      <button class="contact-btn" id="contactCenterBtn">
+        Kontakt senteret
+      </button>
+    </section>
+
+    <section class="facilities-section">
+      <h2>Fasiliteter</h2>
+
+      <div class="facility-grid" id="facilityList"></div>
+    </section>
+
+    <section class="reviews-section">
+      <h2>Anmeldelser</h2>
+
+      <div id="reviewList"></div>
+    </section>
+
+    <section class="page-actions">
+
+      <button class="compare-btn" id="compareBtn">
+        Sammenlign
+      </button>
+
+      <button class="back-btn" id="backToMapBtn">
+        Tilbake til kart
+      </button>
+
+    </section>
+
+      <footer class="footer" id="footer"></footer>
+
+  </main>
+
+  <script src="app.js"></script>
+</body> 
 </html>
