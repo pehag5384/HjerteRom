@@ -32,6 +32,20 @@ body {
 
     position: relative;
 }
+.activity-list {
+    display: flex;
+    gap: 16px;
+
+    overflow-x: auto;
+
+    padding-bottom: 12px;
+
+    scrollbar-width: none;
+}
+
+.activity-list::-webkit-scrollbar {
+    display: none;
+}
 
 .hero-overlay {
     position: absolute;

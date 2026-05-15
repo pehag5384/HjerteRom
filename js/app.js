@@ -14,7 +14,7 @@ async function loadActivities() {
 
     try {
 
-        const response = await fetch("./activities.json");
+        const response = await fetch("..data//activities.json");
 
         const data = await response.json();
 
