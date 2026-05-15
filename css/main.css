@@ -116,53 +116,114 @@ body {
     margin-top: 24px;
 }
 
-.list-header-section {
-    padding: 90px 20px 20px;
+.hero {
+    height: 260px;
+    background-image: url("../assets/images/hero-home.jpg");
+    background-size: cover;
+    background-position: center;
+    position: relative;
 }
 
-.list-actions {
+.hero .hero-overlay {
+    background: none;
+}
+
+.hero h1 {
+    color: #2f4f2f;
+}
+
+.hero p {
+    color: #2f4f2f;
+}
+
+
+.hero {
+    height: 320px;
+    background-image: url("../assets/images/hero-home.jpg");
+    background-size: cover;
+    background-position: center;
+    position: relative;
+}
+
+.hero .hero-overlay {
+    background: none;
     display: flex;
-    justify-content: space-between;
-    margin-bottom: 20px;
+    flex-direction: column;
+    justify-content: flex-end;
+    align-items: flex-start;
+    padding: 24px;
+    height: 90%;
 }
 
-.list-header-section h1 {
-    font-size: 22px;
-    font-weight: 700;
+.hero .hero-overlay p {
+    color: #2f4f2f;
+    font-size: 1rem;
+    font-weight: bold;
     margin-bottom: 4px;
 }
 
-.list-header-section p {
-    color: #6b7280;
-    margin-top: 0;
+.hero .hero-overlay h1 {
+    color: #2f4f2f;
+    font-size: 2rem;
+    font-weight: bold;
+    line-height: 1.2;
 }
 
-.filter-section {
-    padding: 0 20px 20px;
+.hero .hero-overlay span {
+    color: #f57c00;
 }
 
-.filter-tabs {
+
+.search-section {
+    padding: 16px;
+}
+
+.search-section input {
+    width: 100%;
+    padding: 12px 20px;
+    border-radius: 999px;
+    border: none;
+    background-color: white;
+    font-size: 0.95rem;
+    box-shadow: 0 2px 6px rgba(0,0,0,0.1);
+}
+
+
+.shortcut-grid {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 12px;
+    padding: 16px;
+}
+
+
+.popular-section {
+    padding: 16px;
+}
+
+.popular-list {
     display: flex;
-    gap: 10px;
+    gap: 12px;
     overflow-x: auto;
+    scrollbar-width: none;
 }
 
-.sort-section {
-    padding: 0 20px 20px;
+.popular-list::-webkit-scrollbar {
+    display: none;
 }
 
-.sort-box {
-    background: #f4d3a3;
-
-    border: 1px solid #f0b56b;
-
-    border-radius: 12px;
-
-    padding: 12px 16px;
-
-    font-size: 14px;
+.popular-list .care-card {
+    min-width: 160px;
+    max-width: 160px;
+    flex-shrink: 0;
 }
 
-.care-center-list {
-    padding: 0 16px 100px;
+.see-more-btn {
+    background-color: #5d7c3b;
+    color: white;
+    border: none;
+    border-radius: 999px;
+    padding: 12px 32px;
+    margin-top: 16px;
+    display: block;
 }
