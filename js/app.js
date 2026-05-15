@@ -75,7 +75,7 @@ if (page.includes("carecenter")) {
             </div>
         `).join("");
 
-    // Fasiliteter — må være inne i if-blokken!
+
     const facilityLabels = {
         garden: "Hage/uteplass",
         library: "Bibliotek",
@@ -98,6 +98,156 @@ if (page.includes("carecenter")) {
                 </div>
             `).join("");
 }
+
+//--- comparesite----------
+
+if (page.includes("compare")) {
+
+    const {
+        CareListCard
+    } = await import("./components/cards.js");
+
+    const {
+        FilterChip
+    } = await import("./components/filters.js");
+
+    document.getElementById("careCenterAreaName").textContent =
+        "Bergen";
+
+    
+
+    const filters = [
+        "Alle",
+        "Langtidsopphold",
+        "Korttidsopphold",
+        "Demensomsorg"
+    ];
+
+    document.getElementById("filterTabs").innerHTML =
+        filters.map((filter, index) =>
+
+            FilterChip({
+                label: filter,
+                active: index === 0
+            })
+
+        ).join("");
+
+
+
+    document.getElementById("sortInfo").innerHTML = `
+        <div class="sort-box">
+            ⭐ Rangert etter rating
+        </div>
+    `;
+
+
+
+    try {
+
+        const [centerResponse, ratingResponse] =
+            await Promise.all([
+
+                fetch("../data/carecenters.json"),
+
+                fetch("../data/ratings.json")
+
+            ]);
+
+        const centerData =
+            await centerResponse.json();
+
+        const ratingData =
+            await ratingResponse.json();
+
+    
+
+        const sortedCenters = centerData.care_centers
+
+            .filter(center =>
+                center.municipality_id === "bergen"
+            )
+
+            .map(center => {
+
+                const rating =
+                    ratingData.ratings.find(
+                        r => r.center_id === center.id
+                    );
+
+                return {
+                    ...center,
+
+                    averageRating:
+                        rating?.average_rating || 0
+                };
+
+            })
+
+            .sort((a, b) =>
+                b.averageRating - a.averageRating
+            );
+
+document.getElementById("careCenterList").innerHTML =
+
+    sortedCenters.map(center =>
+
+        CareListCard({
+
+            name: center.name,
+
+            location: center.location_summary,
+
+            rating: center.averageRating,
+
+            beds: center.quick_info.beds,
+
+            waitTime: center.quick_info.waiting_time,
+
+            tags: center.quick_info.tags
+
+        })
+
+    ).join("");
+    } catch (error) {
+
+        console.error(
+            "Kunne ikke hente omsorgssentre:",
+            error
+        );
+
+    }
+}
+
+const { HelperCard } =
+    await import("./components/cards.js");
+
+const helpers = [
+
+    {
+        name: "Chanel",
+        phone: "+47 463 73483",
+        image: "../images/chanel.jpg"
+    },
+
+    {
+        name: "Markus",
+        phone: "+47 950 45 574",
+        image: "../images/markus.jpg"
+    },
+
+    {
+        name: "Marit",
+        phone: "+47 973 45 234",
+        image: "../images/marit.jpg"
+    }
+];
+
+document.getElementById("helperList").innerHTML =
+
+    helpers.map(helper =>
+        HelperCard(helper)
+    ).join("");
 
 /**
  * app.js har ansvar for:

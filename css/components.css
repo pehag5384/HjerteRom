@@ -145,10 +145,11 @@
 
 .footer-nav {
     position: fixed;
+
     bottom: 0;
 
-    width: 100%;
-    height: 60px;
+    width: 430px;
+    height: 72px;
 
     background-color: #5d7c3b;
 
@@ -157,7 +158,12 @@
     align-items: center;
 
     color: white;
-    font-size: 24px;
+    font-size: 28px;
+
+    left: 50%;
+    transform: translateX(-50%);
+
+    z-index: 1000;
 }
 
 .app-header {
@@ -206,4 +212,38 @@
 .helpers-image {
     width: 100%;
     display: block;
+}
+
+.helper-list {
+    display: flex;
+
+    justify-content: space-around;
+
+    margin-top: 24px;
+}
+
+.helper-card {
+    text-align: center;
+}
+
+.helper-avatar {
+    width: 90px;
+    height: 90px;
+
+    border-radius: 50%;
+
+    object-fit: cover;
+
+    margin-bottom: 10px;
+}
+
+.helper-card h6 {
+    margin: 0;
+    font-size: 16px;
+    font-weight: 600;
+}
+
+.helper-card p {
+    margin-top: 4px;
+    font-size: 14px;
 }

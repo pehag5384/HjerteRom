@@ -126,3 +126,26 @@ export function CareListCard({
         </div>
     `;
 }
+
+export function HelperCard({
+    name = "",
+    phone = "",
+    image = ""
+}) {
+
+    return `
+        <div class="helper-card">
+
+            <img
+                src="${image}"
+                alt="${name}"
+                class="helper-avatar"
+            />
+
+            <h6>${name}</h6>
+
+            <p>${phone}</p>
+
+        </div>
+    `;
+}
