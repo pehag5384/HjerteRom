@@ -1,184 +1,184 @@
-{
-  "ratings": [
-    {
-      "center_id": "sotra-omsorgssenter",
-      "average_rating": 4.8,
-      "total_reviews": 12,
-      "scores": { "overall": 8, "facilities": 6, "satisfaction": 5 },
-      "user_reviews": [
-        { "id": "r1", "author": "Roger Nilsen", "date": "2024-10-15", "rating": 5, "text": "Veldig hyggelig omsorgssenter!" },
-        { "id": "r2", "author": "Randi Hjertaker", "date": "2024-11-02", "rating": 4, "text": "Hyggelig personal, men litt liten kost." }
-      ]
-    },
-    {
-      "center_id": "landas-omsorgssenter",
-      "average_rating": 4.2,
-      "total_reviews": 8,
-      "scores": { "overall": 7, "facilities": 8, "satisfaction": 6 },
-      "user_reviews": [
-        { "id": "r3", "author": "Kari Nordmann", "date": "2024-09-12", "rating": 4, "text": "Flotte fellesarealer og mye lys." }
-      ]
-    },
-    {
-      "center_id": "fyllingsdalen-omsorg",
-      "average_rating": 4.5,
-      "total_reviews": 15,
-      "scores": { "overall": 9, "facilities": 7, "satisfaction": 8 },
-      "user_reviews": [
-        { "id": "r4", "author": "Arne Berg", "date": "2024-08-20", "rating": 5, "text": "Moderne og flott bygg. Føles trygt." }
-      ]
-    },
-    {
-      "center_id": "uranienborg-hjem",
-      "average_rating": 4.9,
-      "total_reviews": 20,
-      "scores": { "overall": 10, "facilities": 9, "satisfaction": 9 },
-      "user_reviews": [
-        { "id": "r5", "author": "Erik Jensen", "date": "2024-07-05", "rating": 5, "text": "Fantastisk mat og veldig profesjonelle ansatte." }
-      ]
-    },
-    {
-      "center_id": "nordseter-hjem",
-      "average_rating": 4.0,
-      "total_reviews": 10,
-      "scores": { "overall": 6, "facilities": 7, "satisfaction": 6 },
-      "user_reviews": [
-        { "id": "r6", "author": "Berit Olsen", "date": "2024-06-18", "rating": 4, "text": "Litt slitt bygg, men utrolig hyggelige folk som jobber her." }
-      ]
-    },
-    {
-      "center_id": "st-hanshaugen-omsorg",
-      "average_rating": 3.8,
-      "total_reviews": 5,
-      "scores": { "overall": 7, "facilities": 5, "satisfaction": 6 },
-      "user_reviews": [
-        { "id": "r7", "author": "Morten Holm", "date": "2024-05-30", "rating": 3, "text": "Sentralt og greit, men savner mer grøntarealer." }
-      ]
-    },
-    {
-      "center_id": "nidarvoll-helse",
-      "average_rating": 4.7,
-      "total_reviews": 18,
-      "scores": { "overall": 8, "facilities": 9, "satisfaction": 8 },
-      "user_reviews": [
-        { "id": "r8", "author": "Ingrid Vik", "date": "2024-04-12", "rating": 5, "text": "Veldig effektiv rehabilitering. Kom meg raskt på beina." }
-      ]
-    },
-    {
-      "center_id": "ila-omsorg",
-      "average_rating": 4.3,
-      "total_reviews": 7,
-      "scores": { "overall": 7, "facilities": 6, "satisfaction": 8 },
-      "user_reviews": [
-        { "id": "r9", "author": "Sverre Knudsen", "date": "2024-03-25", "rating": 4, "text": "God atmosfære og fine arrangementer for beboerne." }
-      ]
-    },
-    {
-      "center_id": "ranheim-hjem",
-      "average_rating": 4.6,
-      "total_reviews": 11,
-      "scores": { "overall": 8, "facilities": 8, "satisfaction": 9 },
-      "user_reviews": [
-        { "id": "r10", "author": "Liv Hansen", "date": "2024-02-14", "rating": 5, "text": "Utsikten over fjorden er helt fantastisk!" }
-      ]
-    },
-    {
-      "center_id": "madla-omsorg",
-      "average_rating": 4.1,
-      "total_reviews": 9,
-      "scores": { "overall": 7, "facilities": 7, "satisfaction": 7 },
-      "user_reviews": [ { "id": "r1", "author": "Roger Nilsen", "date": "2024-10-15", "rating": 5, "text": "Veldig hyggelig omsorgssenter!" } ]
-    },
-    {
-      "center_id": "eiganes-omsorg",
-      "average_rating": 4.8,
-      "total_reviews": 14,
-      "scores": { "overall": 9, "facilities": 8, "satisfaction": 9 },
-      "user_reviews": [ { "id": "r5", "author": "Erik Jensen", "date": "2024-07-05", "rating": 5, "text": "Fantastisk mat og veldig profesjonelle ansatte." } ]
-    },
-    {
-      "center_id": "hovik-hjem",
-      "average_rating": 4.4,
-      "total_reviews": 12,
-      "scores": { "overall": 8, "facilities": 8, "satisfaction": 8 },
-      "user_reviews": [ { "id": "r4", "author": "Arne Berg", "date": "2024-08-20", "rating": 5, "text": "Moderne og flott bygg. Føles trygt." } ]
-    },
-    {
-      "center_id": "bekkestua-omsorg",
-      "average_rating": 4.7,
-      "total_reviews": 6,
-      "scores": { "overall": 9, "facilities": 9, "satisfaction": 8 },
-      "user_reviews": [ { "id": "r3", "author": "Kari Nordmann", "date": "2024-09-12", "rating": 4, "text": "Flotte fellesarealer og mye lys." } ]
-    },
-    {
-      "center_id": "lindum-omsorg",
-      "average_rating": 4.2,
-      "total_reviews": 15,
-      "scores": { "overall": 7, "facilities": 7, "satisfaction": 8 },
-      "user_reviews": [ { "id": "r9", "author": "Sverre Knudsen", "date": "2024-03-25", "rating": 4, "text": "God atmosfære og fine arrangementer for beboerne." } ]
-    },
-    {
-      "center_id": "bragernes-hjem",
-      "average_rating": 3.9,
-      "total_reviews": 22,
-      "scores": { "overall": 6, "facilities": 6, "satisfaction": 7 },
-      "user_reviews": [ { "id": "r6", "author": "Berit Olsen", "date": "2024-06-18", "rating": 4, "text": "Litt slitt bygg, men utrolig hyggelige folk som jobber her." } ]
-    },
-    {
-      "center_id": "vardaasen-omsorg",
-      "average_rating": 4.8,
-      "total_reviews": 10,
-      "scores": { "overall": 9, "facilities": 8, "satisfaction": 9 },
-      "user_reviews": [ { "id": "r10", "author": "Liv Hansen", "date": "2024-02-14", "rating": 5, "text": "Utsikten over fjorden er helt fantastisk!" } ]
-    },
-    {
-      "center_id": "risenga-bo",
-      "average_rating": 4.5,
-      "total_reviews": 13,
-      "scores": { "overall": 8, "facilities": 10, "satisfaction": 7 },
-      "user_reviews": [ { "id": "r8", "author": "Ingrid Vik", "date": "2024-04-12", "rating": 5, "text": "Veldig effektiv rehabilitering. Kom meg raskt på beina." } ]
-    },
-    {
-      "center_id": "stalsberg-bo",
-      "average_rating": 4.9,
-      "total_reviews": 7,
-      "scores": { "overall": 10, "facilities": 10, "satisfaction": 9 },
-      "user_reviews": [ { "id": "r4", "author": "Arne Berg", "date": "2024-08-20", "rating": 5, "text": "Moderne og flott bygg. Føles trygt." } ]
-    },
-    {
-      "center_id": "lillestrom-bo",
-      "average_rating": 4.1,
-      "total_reviews": 19,
-      "scores": { "overall": 7, "facilities": 6, "satisfaction": 8 },
-      "user_reviews": [ { "id": "r7", "author": "Morten Holm", "date": "2024-05-30", "rating": 3, "text": "Sentralt og greit, men savner mer grøntarealer." } ]
-    },
-    {
-      "center_id": "valhalla-omsorg",
-      "average_rating": 4.4,
-      "total_reviews": 30,
-      "scores": { "overall": 8, "facilities": 7, "satisfaction": 8 },
-      "user_reviews": [ { "id": "r9", "author": "Sverre Knudsen", "date": "2024-03-25", "rating": 4, "text": "God atmosfære og fine arrangementer for beboerne." } ]
-    },
-    {
-      "center_id": "presteheia-hjem",
-      "average_rating": 4.3,
-      "total_reviews": 11,
-      "scores": { "overall": 7, "facilities": 8, "satisfaction": 7 },
-      "user_reviews": [ { "id": "r3", "author": "Kari Nordmann", "date": "2024-09-12", "rating": 4, "text": "Flotte fellesarealer og mye lys." } ]
-    },
-    {
-      "center_id": "onsoy-hjem",
-      "average_rating": 5.0,
-      "total_reviews": 4,
-      "scores": { "overall": 10, "facilities": 9, "satisfaction": 10 },
-      "user_reviews": [ { "id": "r4", "author": "Arne Berg", "date": "2024-08-20", "rating": 5, "text": "Moderne og flott bygg. Føles trygt." } ]
-    },
-    {
-      "center_id": "fredrikstad-hjem",
-      "average_rating": 3.7,
-      "total_reviews": 25,
-      "scores": { "overall": 6, "facilities": 5, "satisfaction": 7 },
-      "user_reviews": [ { "id": "r6", "author": "Berit Olsen", "date": "2024-06-18", "rating": 4, "text": "Litt slitt bygg, men utrolig hyggelige folk som jobber her." } ]
-    }
-  ]
-}
+  {
+    "ratings": [
+      {
+        "center_id": "sotra-omsorgssenter",
+        "average_rating": 4.8,
+        "total_reviews": 12,
+        "scores": { "overall": 8, "facilities": 6, "satisfaction": 5 },
+        "user_reviews": [
+          { "id": "r1", "author": "Roger Nilsen", "date": "2024-10-15", "rating": 5, "text": "Veldig hyggelig omsorgssenter!" },
+          { "id": "r2", "author": "Randi Hjertaker", "date": "2024-11-02", "rating": 4, "text": "Hyggelig personal, men litt liten kost." }
+        ]
+      },
+      {
+        "center_id": "landas-omsorgssenter",
+        "average_rating": 4.2,
+        "total_reviews": 8,
+        "scores": { "overall": 7, "facilities": 8, "satisfaction": 6 },
+        "user_reviews": [
+          { "id": "r3", "author": "Kari Nordmann", "date": "2024-09-12", "rating": 4, "text": "Flotte fellesarealer og mye lys." }
+        ]
+      },
+      {
+        "center_id": "fyllingsdalen-omsorg",
+        "average_rating": 4.5,
+        "total_reviews": 15,
+        "scores": { "overall": 9, "facilities": 7, "satisfaction": 8 },
+        "user_reviews": [
+          { "id": "r4", "author": "Arne Berg", "date": "2024-08-20", "rating": 5, "text": "Moderne og flott bygg. Føles trygt." }
+        ]
+      },
+      {
+        "center_id": "uranienborg-hjem",
+        "average_rating": 4.9,
+        "total_reviews": 20,
+        "scores": { "overall": 10, "facilities": 9, "satisfaction": 9 },
+        "user_reviews": [
+          { "id": "r5", "author": "Erik Jensen", "date": "2024-07-05", "rating": 5, "text": "Fantastisk mat og veldig profesjonelle ansatte." }
+        ]
+      },
+      {
+        "center_id": "nordseter-hjem",
+        "average_rating": 4.0,
+        "total_reviews": 10,
+        "scores": { "overall": 6, "facilities": 7, "satisfaction": 6 },
+        "user_reviews": [
+          { "id": "r6", "author": "Berit Olsen", "date": "2024-06-18", "rating": 4, "text": "Litt slitt bygg, men utrolig hyggelige folk som jobber her." }
+        ]
+      },
+      {
+        "center_id": "st-hanshaugen-omsorg",
+        "average_rating": 3.8,
+        "total_reviews": 5,
+        "scores": { "overall": 7, "facilities": 5, "satisfaction": 6 },
+        "user_reviews": [
+          { "id": "r7", "author": "Morten Holm", "date": "2024-05-30", "rating": 3, "text": "Sentralt og greit, men savner mer grøntarealer." }
+        ]
+      },
+      {
+        "center_id": "nidarvoll-helse",
+        "average_rating": 4.7,
+        "total_reviews": 18,
+        "scores": { "overall": 8, "facilities": 9, "satisfaction": 8 },
+        "user_reviews": [
+          { "id": "r8", "author": "Ingrid Vik", "date": "2024-04-12", "rating": 5, "text": "Veldig effektiv rehabilitering. Kom meg raskt på beina." }
+        ]
+      },
+      {
+        "center_id": "ila-omsorg",
+        "average_rating": 4.3,
+        "total_reviews": 7,
+        "scores": { "overall": 7, "facilities": 6, "satisfaction": 8 },
+        "user_reviews": [
+          { "id": "r9", "author": "Sverre Knudsen", "date": "2024-03-25", "rating": 4, "text": "God atmosfære og fine arrangementer for beboerne." }
+        ]
+      },
+      {
+        "center_id": "ranheim-hjem",
+        "average_rating": 4.6,
+        "total_reviews": 11,
+        "scores": { "overall": 8, "facilities": 8, "satisfaction": 9 },
+        "user_reviews": [
+          { "id": "r10", "author": "Liv Hansen", "date": "2024-02-14", "rating": 5, "text": "Utsikten over fjorden er helt fantastisk!" }
+        ]
+      },
+      {
+        "center_id": "madla-omsorg",
+        "average_rating": 4.1,
+        "total_reviews": 9,
+        "scores": { "overall": 7, "facilities": 7, "satisfaction": 7 },
+        "user_reviews": [ { "id": "r1", "author": "Roger Nilsen", "date": "2024-10-15", "rating": 5, "text": "Veldig hyggelig omsorgssenter!" } ]
+      },
+      {
+        "center_id": "eiganes-omsorg",
+        "average_rating": 4.8,
+        "total_reviews": 14,
+        "scores": { "overall": 9, "facilities": 8, "satisfaction": 9 },
+        "user_reviews": [ { "id": "r5", "author": "Erik Jensen", "date": "2024-07-05", "rating": 5, "text": "Fantastisk mat og veldig profesjonelle ansatte." } ]
+      },
+      {
+        "center_id": "hovik-hjem",
+        "average_rating": 4.4,
+        "total_reviews": 12,
+        "scores": { "overall": 8, "facilities": 8, "satisfaction": 8 },
+        "user_reviews": [ { "id": "r4", "author": "Arne Berg", "date": "2024-08-20", "rating": 5, "text": "Moderne og flott bygg. Føles trygt." } ]
+      },
+      {
+        "center_id": "bekkestua-omsorg",
+        "average_rating": 4.7,
+        "total_reviews": 6,
+        "scores": { "overall": 9, "facilities": 9, "satisfaction": 8 },
+        "user_reviews": [ { "id": "r3", "author": "Kari Nordmann", "date": "2024-09-12", "rating": 4, "text": "Flotte fellesarealer og mye lys." } ]
+      },
+      {
+        "center_id": "lindum-omsorg",
+        "average_rating": 4.2,
+        "total_reviews": 15,
+        "scores": { "overall": 7, "facilities": 7, "satisfaction": 8 },
+        "user_reviews": [ { "id": "r9", "author": "Sverre Knudsen", "date": "2024-03-25", "rating": 4, "text": "God atmosfære og fine arrangementer for beboerne." } ]
+      },
+      {
+        "center_id": "bragernes-hjem",
+        "average_rating": 3.9,
+        "total_reviews": 22,
+        "scores": { "overall": 6, "facilities": 6, "satisfaction": 7 },
+        "user_reviews": [ { "id": "r6", "author": "Berit Olsen", "date": "2024-06-18", "rating": 4, "text": "Litt slitt bygg, men utrolig hyggelige folk som jobber her." } ]
+      },
+      {
+        "center_id": "vardaasen-omsorg",
+        "average_rating": 4.8,
+        "total_reviews": 10,
+        "scores": { "overall": 9, "facilities": 8, "satisfaction": 9 },
+        "user_reviews": [ { "id": "r10", "author": "Liv Hansen", "date": "2024-02-14", "rating": 5, "text": "Utsikten over fjorden er helt fantastisk!" } ]
+      },
+      {
+        "center_id": "risenga-bo",
+        "average_rating": 4.5,
+        "total_reviews": 13,
+        "scores": { "overall": 8, "facilities": 10, "satisfaction": 7 },
+        "user_reviews": [ { "id": "r8", "author": "Ingrid Vik", "date": "2024-04-12", "rating": 5, "text": "Veldig effektiv rehabilitering. Kom meg raskt på beina." } ]
+      },
+      {
+        "center_id": "stalsberg-bo",
+        "average_rating": 4.9,
+        "total_reviews": 7,
+        "scores": { "overall": 10, "facilities": 10, "satisfaction": 9 },
+        "user_reviews": [ { "id": "r4", "author": "Arne Berg", "date": "2024-08-20", "rating": 5, "text": "Moderne og flott bygg. Føles trygt." } ]
+      },
+      {
+        "center_id": "lillestrom-bo",
+        "average_rating": 4.1,
+        "total_reviews": 19,
+        "scores": { "overall": 7, "facilities": 6, "satisfaction": 8 },
+        "user_reviews": [ { "id": "r7", "author": "Morten Holm", "date": "2024-05-30", "rating": 3, "text": "Sentralt og greit, men savner mer grøntarealer." } ]
+      },
+      {
+        "center_id": "valhalla-omsorg",
+        "average_rating": 4.4,
+        "total_reviews": 30,
+        "scores": { "overall": 8, "facilities": 7, "satisfaction": 8 },
+        "user_reviews": [ { "id": "r9", "author": "Sverre Knudsen", "date": "2024-03-25", "rating": 4, "text": "God atmosfære og fine arrangementer for beboerne." } ]
+      },
+      {
+        "center_id": "presteheia-hjem",
+        "average_rating": 4.3,
+        "total_reviews": 11,
+        "scores": { "overall": 7, "facilities": 8, "satisfaction": 7 },
+        "user_reviews": [ { "id": "r3", "author": "Kari Nordmann", "date": "2024-09-12", "rating": 4, "text": "Flotte fellesarealer og mye lys." } ]
+      },
+      {
+        "center_id": "onsoy-hjem",
+        "average_rating": 5.0,
+        "total_reviews": 4,
+        "scores": { "overall": 10, "facilities": 9, "satisfaction": 10 },
+        "user_reviews": [ { "id": "r4", "author": "Arne Berg", "date": "2024-08-20", "rating": 5, "text": "Moderne og flott bygg. Føles trygt." } ]
+      },
+      {
+        "center_id": "fredrikstad-hjem",
+        "average_rating": 3.7,
+        "total_reviews": 25,
+        "scores": { "overall": 6, "facilities": 5, "satisfaction": 7 },
+        "user_reviews": [ { "id": "r6", "author": "Berit Olsen", "date": "2024-06-18", "rating": 4, "text": "Litt slitt bygg, men utrolig hyggelige folk som jobber her." } ]
+      }
+    ]
+  }
