@@ -115,3 +115,23 @@ body {
     justify-content: space-around;
     margin-top: 24px;
 }
+
+.hero {
+    height: 260px;
+    background-image: url("../assets/images/hero-home.jpg");
+    background-size: cover;
+    background-position: center;
+    position: relative;
+}
+
+.hero .hero-overlay {
+    background: none;
+}
+
+.hero h1 {
+    color: #2f4f2f;
+}
+
+.hero p {
+    color: #2f4f2f;
+}
