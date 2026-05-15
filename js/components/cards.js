@@ -18,7 +18,6 @@ export function PreferenceCard({ title = "", description = "", icon = "" }) {
         </div>
     `;
 }
-
 export function GridCard({ title = "", icon = "" }) {
     return `
         <div class="card border-0 shadow-sm text-center grid-card h-100">

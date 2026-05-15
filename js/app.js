@@ -1,3 +1,50 @@
+import { Header } from "./header.js";
+import { Footer } from "./footer.js";
+import { ActivityCard } from "./cards.js";
+
+document.getElementById("header").innerHTML = Header();
+
+document.getElementById("footer").innerHTML = Footer();
+
+document.getElementById("activityAreaName").textContent = "Bergen";
+
+document.getElementById("introAreaName").textContent = "Bergen";
+
+async function loadActivities() {
+
+    try {
+
+        const response = await fetch("./activities.json");
+
+        const data = await response.json();
+
+        const activities = data.activities;
+
+        document.getElementById("activityList").innerHTML =
+            activities.map(activity =>
+
+                ActivityCard({
+                    title: activity.title,
+                    description: activity.description,
+
+                    image:
+                        activity.image ||
+                        "images/default-activity.jpg"
+                })
+
+            ).join("");
+
+    } catch (error) {
+
+        console.error("Kunne ikke hente aktiviteter:", error);
+
+    }
+}
+
+loadActivities();
+
+
+
 /**
  * app.js
  *

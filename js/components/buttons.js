@@ -4,6 +4,7 @@ export function Button({
     label = "",
     variant = "primary",
     icon = "",
+    classname=""
 }) {
 
     const classes = {
@@ -12,7 +13,7 @@ export function Button({
     };
 
     return `
-        <button class="btn ${classes[variant]}">
+        <button class="btn ${classes[variant]} ${classname}">
 
             ${icon ? `<i class="bi ${icon} me-2"></i>` : ""}
 
