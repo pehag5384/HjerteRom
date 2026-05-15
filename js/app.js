@@ -1,117 +1,93 @@
 import { Header } from "./components/header.js";
 import { Footer } from "./components/footer.js";
-import { ActivityCard } from "./components/cards.js";
+import { dataService } from './dataService.js';
 
+// Kjør alltid header og footer
 document.getElementById("header").innerHTML = Header();
-
 document.getElementById("footer").innerHTML = Footer();
 
-document.getElementById("activityAreaName").textContent = "Bergen";
+// Finn ut hvilken side vi er på
+const page = window.location.pathname;
 
-document.getElementById("introAreaName").textContent = "Bergen";
+// ── ACTIVITIES ──────────────────────────────
+if (page.includes("activities")) {
+    const { ActivityCard } = await import("./components/cards.js");
 
-async function loadActivities() {
+    document.getElementById("activityAreaName").textContent = "Bergen";
+    document.getElementById("introAreaName").textContent = "Bergen";
 
     try {
-
-        const response = await fetch("..data//activities.json");
-
+        const response = await fetch("../data/activities.json");
         const data = await response.json();
-
-        const activities = data.activities;
-
         document.getElementById("activityList").innerHTML =
-            activities.map(activity =>
-
+            data.activities.map(activity =>
                 ActivityCard({
                     title: activity.title,
                     description: activity.description,
-
-                    image:
-                        activity.image ||
-                        "images/default-activity.jpg"
+                    image: activity.image || "images/default-activity.jpg"
                 })
-
             ).join("");
-
     } catch (error) {
-
         console.error("Kunne ikke hente aktiviteter:", error);
-
     }
 }
 
-loadActivities();
+// ── CARECENTER ──────────────────────────────
+if (page.includes("carecenter")) {
+    const center = await dataService.getFullCenterDetails("sotra-omsorgssenter");
+
+    // Hero
+    document.getElementById("centerName").textContent = center.name;
+    document.getElementById("nearestHospital").textContent = center.nearest_hospital;
+    document.getElementById("centerAddress").textContent = center.address;
+
+    // Avstand og reisetid
+    document.getElementById("distanceToCenter").textContent = center.map_info.distance_km + " km";
+    document.getElementById("travelTime").textContent = center.map_info.travel_time_min + " min";
+
+    // Scores
+    document.getElementById("overallScore").textContent = center.rating_info.scores.overall;
+    document.getElementById("facilityScore").textContent = center.rating_info.scores.facilities;
+    document.getElementById("satisfactionScore").textContent = center.rating_info.scores.satisfaction;
+
+    // Om senteret
+    document.getElementById("centerDescription").textContent = center.about;
+
+    // Tjenester
+    document.getElementById("serviceList").innerHTML =
+        center.services.map(s => `<li>${s}</li>`).join("");
+
+    // Åpningstider
+    document.getElementById("openingHours").innerHTML = `
+        <p>Mandag - Fredag: ${center.opening_hours.weekday}</p>
+        <p>Lørdag - Søndag: ${center.opening_hours.weekend}</p>
+        <p><em>${center.opening_hours.note}</em></p>
+    `;
+
+    // Praktisk info
+    document.getElementById("practicalInfoList").innerHTML = `
+        <p>Pris pr. måned: ${center.practical_info.price_per_month} kr</p>
+        <p>Ventetid: ${center.practical_info.waiting_time}</p>
+        <p>Type omsorg: ${center.practical_info.care_type}</p>
+        <p>Antall plasser: ${center.practical_info.room_count}</p>
+        <p>Etablert: ${center.practical_info.established_year}</p>
+        <p>Måltider: ${center.practical_info.meals}</p>
+        <p>Spesialisering: ${center.practical_info.specialization}</p>
+    `;
+
+    // Anmeldelser
+    document.getElementById("reviewList").innerHTML =
+        center.rating_info.user_reviews.map(r => `
+            <div class="review-card">
+                <p><strong>${r.author}</strong></p>
+                <p>${r.text}</p>
+            </div>
+        `).join("");
+}
 
 
-// MIDLERTIDIG TEST - slett etterpå
 
 
-const center = await dataService.getFullCenterDetails("sotra-omsorgssenter");
-console.log(center);
-
-document.getElementById("centerName").textContent = center.name;
-document.getElementById("nearestHospital").textContent = center.nearest_hospital;
-document.getElementById("centerAddress").textContent = center.address;
-
-
-
-/**
- * app.js
- *
- * Dette er applikasjonens "orkestrator".
- *
- * app.js inneholder:
- * - oppstartslogikk
- * - enkel rute-/sidekontroll
- * - koordinering mellom state, data og UI
- *
- * app.js inneholder IKKE:
- * - avansert forretningslogikk
- * - anbefalingsregler
- * - tegnelogikk for komponenter
- */
-
-import { dataService } from './dataService.js';
-import { recommend } from './recommendation.js';
-import { appState } from './state.js';
-
-/* // Midlertidig testflyt (dag 1–2)
-// 1) Hardkodet preferanse for én kommune
-// 2) Hent aktiviteter fra dataService
-// 3) Kjør anbefaling
-// 4) Lagre i state og logg resultatet
-    export async function runRecommendationTest() {
-        const preferences = {
-            municipalityId: 'bergen',
-            interests: ['kultur', 'trening', 'musikk']
-        };
-
-        appState.setPreferences(preferences);
-
-        // Hent aktiviteter og byliste
-        const [activitiesData, citiesData, carecentersData] = await Promise.all([
-            dataService.fetchData('../data/activities.json'),
-            dataService.fetchData('../data/cities.json'),
-            dataService.fetchData('../data/carecenters.json')
-        ]);
-
-        const activities = activitiesData ? activitiesData.activities : [];
-        const cities = citiesData ? citiesData.municipalities : [];
-        const careCenters = carecentersData ? carecentersData.care_centers : [];
-
-        const result = recommend(preferences, { activities, cities, careCenters });
-
-        appState.setRecommendation(result);
-
-        console.log('Recommendation result:', result);
-
-        return result;
-    }
-
-// Run automatically during development for quick verification
-// Remove or guard behind feature-flag later.
-runRecommendationTest().catch(err => console.error('Test run failed:', err)); */
 
 /**
  * app.js har ansvar for:
