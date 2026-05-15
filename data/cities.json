@@ -4,7 +4,7 @@
       "id": "oslo",
       "name": "Oslo sentrum",
       "county": "Oslo",
-      "image_url": "https://images.unsplash.com/photo-1589139556816-41f87a32431d?q=80&w=1200&auto=format&fit=crop",
+      "image_url": "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcR0JFf8Pgk_NC-AI4HQmPU5542x4bbNIFiWyw&s",
       "coordinates": { "lat": 59.9139, "lng": 10.7522 },
       "ratings": { "overall": 9, "physical_health": 7, "satisfaction": 8 },
       "elderly_care": {
@@ -46,7 +46,7 @@
       "id": "trondheim",
       "name": "Trondheim",
       "county": "Trøndelag",
-      "image_url": "https://images.unsplash.com/photo-1588661641049-74d75680197d?q=80&w=1200&auto=format&fit=crop",
+      "image_url": "https://visittrondheim.no/wp-content/uploads/2025/01/1920X1219_Crazy-Coyote.jpg",
       "coordinates": { "lat": 63.4305, "lng": 10.3951 },
       "ratings": { "overall": 8, "physical_health": 8, "satisfaction": 8 },
       "elderly_care": {
@@ -67,7 +67,7 @@
       "id": "stavanger",
       "name": "Stavanger",
       "county": "Rogaland",
-      "image_url": "https://images.unsplash.com/photo-1627443171850-8bc2c77d4838?q=80&w=1200&auto=format&fit=crop",
+      "image_url": "https://res.cloudinary.com/gofjords-com/images/w_2560,h_1600,c_scale/f_auto,q_auto:eco/v1698920798/Destinations/Stavanger/Stavanger-city-Harbor-sunset-summer-night/Stavanger-city-Harbor-sunset-summer-night.jpg?_i=AA",
       "coordinates": { "lat": 58.9700, "lng": 5.7331 },
       "ratings": { "overall": 7, "physical_health": 6, "satisfaction": 8 },
       "elderly_care": {
@@ -88,7 +88,7 @@
       "id": "fredrikstad",
       "name": "Fredrikstad",
       "county": "Østfold",
-      "image_url": "https://images.unsplash.com/photo-1628152520448-9366f366e6c1?q=80&w=1200&auto=format&fit=crop",
+      "image_url": "https://www.fredrikstadfk.no/in-english-about-fredrikstad-ffk/the-city/_/image/0ec72370-2048-483c-9f6d-cd082a794b02:7272369045cfd8518e65727f5873bcad893c97c2/wide-1600-900/Flyfoto%20Gamlebyen%20@stenhelberg.jpeg.jpg",
       "coordinates": { "lat": 59.2205, "lng": 10.9347 },
       "ratings": { "overall": 7, "physical_health": 5, "satisfaction": 8 },
       "elderly_care": {
