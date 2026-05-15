@@ -1,6 +1,7 @@
 import { Header } from "./components/header.js";
 import { Footer } from "./components/footer.js";
 import { dataService } from './dataService.js';
+import { appState } from './state.js';
 import * as mapService from './mapService.js';
 import { appState } from './state.js';
 
@@ -172,6 +173,64 @@ if (page.includes("carecenter")) {
                 </div>
             `).join("");
 }
+
+// ── HOME ──────────────────────────────
+if (page.includes("home")) {
+    const state = appState.getState();
+
+    // Hilsen og område (hardkodet midlertidig)
+    document.getElementById("homegreeting").textContent = "Hei Arild!";
+    document.getElementById("currentArea").textContent = "Bergen!";
+
+    // Snarveier
+    document.getElementById("shortcutGrid").innerHTML = `
+        <div class="feature-card p-3 mb-2">
+            <div class="feature-icon"><i class="bi bi-house"></i></div>
+            <div>
+                <h6>Finn omsorgssentre</h6>
+                <p>Se oversikt over omsorgssentere i ditt område.</p>
+            </div>
+        </div>
+        <div class="feature-card p-3 mb-2">
+            <div class="feature-icon"><i class="bi bi-arrow-left-right"></i></div>
+            <div>
+                <h6>Sammenlign tilbud</h6>
+                <p>Sammenlign kvalitet, fasiliteter og vurderinger enkelt.</p>
+            </div>
+        </div>
+        <div class="feature-card p-3 mb-2">
+            <div class="feature-icon"><i class="bi bi-bus-front"></i></div>
+            <div>
+                <h6>Transport og aktiviteter</h6>
+                <p>Finn aktiviteter, turer og transportmuligheter nær deg.</p>
+            </div>
+        </div>
+        <div class="feature-card p-3 mb-2">
+            <div class="feature-icon"><i class="bi bi-geo-alt"></i></div>
+            <div>
+                <h6>Tjenester nær deg</h6>
+                <p>Utforsk tjenester som matbutikk, helsetjenester og mer.</p>
+            </div>
+        </div>
+    `;
+
+    // Populære sentre
+    const centers = await dataService.getCentersByMunicipality("bergen");
+    document.getElementById("popularCenters").innerHTML =
+        centers.slice(0, 2).map(c => `
+            <div class="care-card mb-2">
+                <img class="care-image w-100" src="${c.image_url}" alt="${c.name}" />
+                <div class="p-2">
+                    <h6>${c.name}</h6>
+                </div>
+            </div>
+        `).join("");
+}
+
+
+
+
+
 
 /**
  * app.js har ansvar for:
