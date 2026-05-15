@@ -5,10 +5,31 @@
       "municipality_id": "bergen",
       "category": "Trening & Dans",
       "title": "Bergen Dansesenter",
-      "description": "Dansesenteret tilbyr flere kurs for seniorer inkludert Dans 65+.",
-      "image_url": "https://images.unsplash.com/photo-1547153760-18fc86324498?auto=format&fit=crop&w=800&q=80",
-      "location": { "name": "Georgernes Verft", "address": "USF Verftet" },
-      "contact": { "phone": "55 32 08 66" }
+      "description": "Dansesenteret tilbyr flere kurs for seniorer og voksne på Georgernes Verft, inkludert Dans 65+ og improvisasjon.",
+      "long_description": "Dans 65+ er tilpasset seniorer med fokus på tempo, pust, koordinasjon og balanse. Inspirert av samtidsdans og jazz.",
+      "location": {
+        "name": "Georgernes Verft",
+        "address": "USF Verftet"
+      },
+      "contact": {
+        "phone": "55 32 08 66",
+        "email": "post@bergen-dansesenter.no"
+      },
+      "link": "https://www.bergen-dansesenter.no"
+    },
+    {
+      "id": "bergen-kulturforum",
+      "municipality_id": "bergen",
+      "category": "Kultur",
+      "title": "Bergen Kulturforum (BKF)",
+      "description": "Frivillig organisasjon som arrangerer rimelige og varierte kulturtilbud til de godt voksne.",
+      "location": {
+        "address": "Kong Oscarsgate 15"
+      },
+      "contact": {
+        "phone": "94 82 82 98",
+        "email": "post@bergenkulturforum.no"
+      }
     },
     {
       "id": "dnt-senior-bergen",
@@ -16,149 +37,107 @@
       "category": "Natur & Tur",
       "title": "DNT Seniorgruppen",
       "description": "Varierte fellesturer i Byfjellene og omegn for alle over 60 år.",
-      "image_url": "https://images.unsplash.com/photo-1551632811-561732d1e306?auto=format&fit=crop&w=800&q=80",
-      "location": { "name": "Tursenteret", "address": "Tverrgaten 4-6" },
-      "contact": { "phone": "55 33 58 10" }
+      "long_description": "Inkluderer 'Aktiv til 100' (rolige turer på grusvei) og ukentlige mandags- og onsdagsturer. Gratis og ingen påmelding.",
+      "location": {
+        "name": "Tursenteret",
+        "address": "Tverrgaten 4-6"
+      },
+      "contact": {
+        "phone": "55 33 58 10",
+        "email": "senior.bergen@dnt.no"
+      }
     },
     {
-      "id": "bergen-kulturforum",
-      "municipality_id": "bergen",
-      "category": "Kultur",
-      "title": "Bergen Kulturforum",
-      "description": "Rimelige og varierte kulturtilbud til de godt voksne i byen.",
-      "image_url": "https://images.unsplash.com/photo-1507842217343-583bb7270b66?auto=format&fit=crop&w=800&q=80",
-      "location": { "address": "Kong Oscarsgate 15" },
-      "contact": { "phone": "94 82 82 98" }
-    },
-    {
-      "id": "datakafe-bergen",
+      "id": "datakafe-danckert-krohn",
       "municipality_id": "bergen",
       "category": "Teknologi",
       "title": "Datakafé",
-      "description": "Lær om digitale verktøy og sosiale medier over en kaffekopp.",
-      "image_url": "https://images.unsplash.com/photo-1581092921461-7d15cb8905ed?auto=format&fit=crop&w=800&q=80",
-      "location": { "name": "Kulturhuset Danckert Krohn", "address": "Kong Oscars gate 54" },
-      "contact": { "phone": "55 56 42 00" }
+      "description": "Lær om digitale verktøy og tjenester som brukes i hverdagen.",
+      "time": "Tirsdager kl. 13.00-15.00",
+      "location": {
+        "name": "Kulturhuset Danckert Krohn",
+        "address": "Kong Oscars gate 54"
+      }
     },
     {
-      "id": "oslo-senior-yoga",
-      "municipality_id": "oslo",
-      "category": "Trening & Helse",
-      "title": "Senioryoga i Frognerparken",
-      "description": "Myk yoga tilpasset alle nivåer i vakre omgivelser utendørs.",
-      "image_url": "https://images.unsplash.com/photo-1571019613454-1cb2f99b2d8b?auto=format&fit=crop&w=800&q=80",
-      "location": { "name": "Frognerparken", "address": "Kirkeveien" },
-      "contact": { "phone": "23 47 00 00" }
-    },
-    {
-      "id": "oslo-nasjonalmuseet-omvisning",
-      "municipality_id": "oslo",
+      "id": "hovedbiblioteket-aktiviteter",
+      "municipality_id": "bergen",
       "category": "Kultur",
-      "title": "Senioromvisning Nasjonalmuseet",
-      "description": "Spesialtilpassede omvisninger i samlingen for kunstinteresserte.",
-      "image_url": "https://images.unsplash.com/photo-1518998053502-53cc8de791f7?auto=format&fit=crop&w=800&q=80",
-      "location": { "name": "Nasjonalmuseet", "address": "Brynjulf Bulls plass 3" },
-      "contact": { "phone": "21 98 20 00" }
+      "title": "Bergen Offentlige Bibliotek",
+      "description": "Et bredt tilbud med Mandagsfilm, Litterær lunsj og Fiksetorsdag.",
+      "long_description": "Her kan du få datahjelp, delta i lesegrupper på lett norsk, eller drive med slektsgransking.",
+      "location": {
+        "name": "Hovedbiblioteket",
+        "address": "Strømgaten 6"
+      },
+      "contact": {
+        "phone": "55 56 85 00"
+      }
     },
     {
-      "id": "oslo-dnt-senior",
-      "municipality_id": "oslo",
-      "category": "Natur & Tur",
-      "title": "DNT Oslo Senior",
-      "description": "Fellesturer i Marka hver onsdag med erfarne turledere og kaffestopp.",
-      "image_url": "https://images.unsplash.com/photo-1441974231531-c6227db76b6e?auto=format&fit=crop&w=800&q=80",
-      "location": { "name": "Friluftshuset Sørenga", "address": "Sørengkaia 124" },
-      "contact": { "phone": "22 82 28 00" }
+      "id": "kulturhuset-danckert-krohn",
+      "municipality_id": "bergen",
+      "category": "Sosialt & Kultur",
+      "title": "Kulturhuset Danckert Krohn",
+      "description": "Et nyoppusset kulturhus med kafé, hage og et vell av faste grupper.",
+      "activities_list": ["Malekurs", "Billedvev", "Bridge", "Seniordans", "Tango"],
+      "location": {
+        "address": "Kong Oscars gate 54"
+      },
+      "contact": {
+        "phone": "55 56 42 00"
+      }
     },
     {
-      "id": "oslo-munch-verksted",
-      "municipality_id": "oslo",
+      "id": "sterk-og-stodig",
+      "municipality_id": "bergen",
+      "category": "Trening & Helse",
+      "title": "Sterk og stødig",
+      "description": "Styrke- og balansetrening for seniorer som er litt ustø.",
+      "long_description": "Trening i grupper med fokus på beinstyrke og balanse. Foregår flere steder som Vitalitetssenteret og Norrønahallen.",
+      "contact": {
+        "phone": "53 03 53 80"
+      }
+    },
+    {
+      "id": "sandviken-seniorsenter",
+      "municipality_id": "bergen",
       "category": "Sosialt",
-      "title": "Seniortreff på Munch",
-      "description": "Kreative verksteder og sosialt samvær i museets flotte lokaler.",
-      "image_url": "https://images.unsplash.com/photo-1460661419201-fd4cecdf8a8b?auto=format&fit=crop&w=800&q=80",
-      "location": { "name": "Munchmuseet", "address": "Edvard Munchs Plass 1" },
-      "contact": { "phone": "23 49 35 00" }
+      "title": "Sandviken Seniorsenter",
+      "description": "Et sosialt knutepunkt med bingo, quiz, sangstunder og 'Fisketirsdag'.",
+      "location": {
+        "address": "Helgesensgt 2"
+      },
+      "contact": {
+        "phone": "55 32 75 75",
+        "email": "sandviken.senior@gmail.com"
+      }
     },
     {
-      "id": "trondheim-datakafe",
-      "municipality_id": "trondheim",
-      "category": "Teknologi",
-      "title": "Datakafé Hornemansgården",
-      "description": "Få hjelp med smarttelefon og nettbrett i byens hjerte.",
-      "image_url": "https://images.unsplash.com/photo-1516321318423-f06f85e504b3?auto=format&fit=crop&w=800&q=80",
-      "location": { "name": "Hornemansgården", "address": "Kongens gate 7" },
-      "contact": { "phone": "73 84 17 00" }
+      "id": "bergen-pensjonistorkester",
+      "municipality_id": "bergen",
+      "category": "Musikk",
+      "title": "Bergen Pensjonistorkester",
+      "description": "Salongorkester for strykere, blåsere og piano. Nye medlemmer velkomne.",
+      "time": "Øving tirsdager kl. 12.30–14.30",
+      "location": {
+        "name": "Kulturhuset Danckert Krohn"
+      },
+      "contact": {
+        "phone": "99 43 71 70"
+      }
     },
     {
-      "id": "trondheim-seniorskøyting",
-      "municipality_id": "trondheim",
-      "category": "Trening & Helse",
-      "title": "Seniorskøyting i Leangen",
-      "description": "Hold balansen ved like med rolig skøyting i ishallen.",
-      "image_url": "https://images.unsplash.com/photo-1517177773512-7059174abc03?auto=format&fit=crop&w=800&q=80",
-      "location": { "name": "Leangen Ishall", "address": "Tungasletta 3" },
-      "contact": { "phone": "72 54 00 00" }
-    },
-    {
-      "id": "trondheim-nidaros-omvisning",
-      "municipality_id": "trondheim",
-      "category": "Kultur",
-      "title": "Orgelmeditasjon Nidarosdomen",
-      "description": "Stemningsfull musikk og historisk atmosfære i katedralen.",
-      "image_url": "https://images.unsplash.com/photo-1548777123-e216912df7d8?auto=format&fit=crop&w=800&q=80",
-      "location": { "name": "Nidarosdomen", "address": "Bispegata 11" },
-      "contact": { "phone": "73 89 08 00" }
-    },
-    {
-      "id": "trondheim-tur-ladestien",
-      "municipality_id": "trondheim",
-      "category": "Natur & Tur",
-      "title": "Trimgruppe Ladestien",
-      "description": "Felles tur langs sjøen med avsluttende lunsj på Ladekaia.",
-      "image_url": "https://images.unsplash.com/photo-1551632811-561732d1e306?auto=format&fit=crop&w=800&q=80",
-      "location": { "name": "Ladestien", "address": "Lade" },
-      "contact": { "phone": "73 10 20 30" }
-    },
-    {
-      "id": "stavanger-solvberget-lunsj",
-      "municipality_id": "stavanger",
-      "category": "Kultur",
-      "title": "Litterær Lunsj",
-      "description": "Forfattermøter og bokpresentasjoner på Sølvberget.",
-      "image_url": "https://images.unsplash.com/photo-1507842217343-583bb7270b66?auto=format&fit=crop&w=800&q=80",
-      "location": { "name": "Sølvberget Bibliotek", "address": "Sølvberggata 2" },
-      "contact": { "phone": "51 50 74 65" }
-    },
-    {
-      "id": "stavanger-oljemuseum-senior",
-      "municipality_id": "stavanger",
-      "category": "Sosialt",
-      "title": "Seniortreff Oljemuseet",
-      "description": "Foredrag om byens historie etterfulgt av sosialt samvær i kafeen.",
-      "image_url": "https://images.unsplash.com/photo-1518156677180-95a2893f3e9f?auto=format&fit=crop&w=800&q=80",
-      "location": { "name": "Norsk Oljemuseum", "address": "Kjeringholmen 1" },
-      "contact": { "phone": "51 93 93 00" }
-    },
-    {
-      "id": "stavanger-tur-mosvatnet",
-      "municipality_id": "stavanger",
-      "category": "Natur & Tur",
-      "title": "Mosvatnet Rundt",
-      "description": "Ukentlig rusletur i flatt terreng med fokus på fugleliv og frisk luft.",
-      "image_url": "https://images.unsplash.com/photo-1441974231531-c6227db76b6e?auto=format&fit=crop&w=800&q=80",
-      "location": { "name": "Mosvatnet", "address": "Eiganes" },
-      "contact": { "phone": "51 50 70 90" }
-    },
-    {
-      "id": "stavanger-senior-svomming",
-      "municipality_id": "stavanger",
-      "category": "Trening & Helse",
-      "title": "Seniorsvømming",
-      "description": "Vanngymnastikk i varmtvannsbasseng som er skånsomt for leddene.",
-      "image_url": "https://images.unsplash.com/photo-1530549387631-fbb129c1b04e?auto=format&fit=crop&w=800&q=80",
-      "location": { "name": "Stavanger Svømmehall", "address": "Jan Baalsruds plass 1" },
-      "contact": { "phone": "51 50 74 15" }
+      "id": "generasjon-festival",
+      "municipality_id": "bergen",
+      "category": "Festival",
+      "title": "Generasjon - en aldringsfestival",
+      "description": "Årlig festival under Festspillene med debatter, kunst og mesterklasser.",
+      "time": "29. og 30. mai 2026",
+      "location": {
+        "name": "Litteraturhuset i Bergen"
+      },
+      "link": "https://generasjonsfestivalen.no"
     }
   ]
 }
